@@ -1,0 +1,89 @@
+/* Mobile first; these widen the layout for tablet and desktop (SPEC 77). */
+
+@media (min-width: 641px) {
+  :root {
+    --gutter: 32px;
+  }
+
+  .listen__body {
+    gap: 12px;
+  }
+
+  .panel {
+    margin: auto;
+    border-radius: 20px;
+    max-height: 80dvh;
+  }
+
+  .volume {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 1025px) {
+  .site-header {
+    padding-inline: 48px;
+  }
+
+  .listen__body {
+    max-width: 50rem;
+    padding-bottom: 28px;
+  }
+
+  .subtitle {
+    font-size: 1.75rem;
+  }
+}
+
+/* Narrow phones: the header must fit brand, three links and the language switch. */
+@media (max-width: 480px) {
+  .site-header {
+    gap: 4px;
+  }
+
+  .site-header nav a {
+    padding: 0 7px;
+    font-size: 0.86rem;
+  }
+}
+
+/* Short landscape phones: keep every control on screen. */
+@media (max-height: 520px) {
+  .listen__body {
+    padding-top: 72px;
+    gap: 4px;
+  }
+
+  .subtitle {
+    min-height: calc(1.4em * 2);
+    padding-top: 8px;
+  }
+
+  .play {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage__layer {
+    animation: none !important;
+    transition-duration: 1ms !important;
+  }
+
+  .panel[open],
+  .play.is-waiting {
+    animation: none;
+  }
+
+  .subtitle {
+    transition: none;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --text-muted: #e2d8c6;
+    --line: rgb(243 236 224 / 40%);
+  }
+}

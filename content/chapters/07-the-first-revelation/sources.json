@@ -1,0 +1,13 @@
+[
+  { "id": "quran-96-1-5", "type": "quran", "title": "Qur'an", "reference": "Surah al-Alaq 96:1-5" },
+  { "id": "quran-74-1-5", "type": "quran", "title": "Qur'an", "reference": "Surah al-Muddaththir 74:1-5" },
+  { "id": "quran-2-185", "type": "quran", "title": "Qur'an", "reference": "Surah al-Baqarah 2:185" },
+  { "id": "quran-97-1", "type": "quran", "title": "Qur'an", "reference": "Surah al-Qadr 97:1" },
+  { "id": "quran-29-48", "type": "quran", "title": "Qur'an", "reference": "Surah al-Ankabut 29:48" },
+  { "id": "bukhari-3", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Beginning of Revelation, hadith 3", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Beginning of Revelation, hadith 4", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3902", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3902", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "muslim-160", "type": "hadith", "title": "Sahih Muslim", "reference": "Book of Faith, hadith 160", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "muslim-161", "type": "hadith", "title": "Sahih Muslim", "reference": "Book of Faith, hadith 161", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Section on the cave of Hira and the beginning of revelation; page to be confirmed against the reference edition" }
+]

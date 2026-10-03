@@ -1,0 +1,25 @@
+{
+  "name": "sirah-audio",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run content && vite",
+    "content": "node scripts/build-content.ts",
+    "narrate": "node scripts/build-content.ts && .tools/venv/bin/python tools/narrate.py && node scripts/build-content.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run content && tsc --noEmit && vite build && node scripts/prerender.ts",
+    "preview": "vite preview",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@fontsource/amiri": "^5.3.0",
+    "@fontsource/cormorant-garamond": "^5.3.0",
+    "@fontsource/hind-siliguri": "^5.3.0",
+    "@fontsource/noto-serif-bengali": "^5.3.0",
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.2",
+    "vitest": "^5.0.3"
+  }
+}

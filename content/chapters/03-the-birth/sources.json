@@ -1,0 +1,11 @@
+[
+  { "id": "quran-105-1-5", "type": "quran", "title": "Qur'an", "reference": "Surah al-Fil 105:1-5" },
+  { "id": "quran-93-6", "type": "quran", "title": "Qur'an", "reference": "Surah ad-Duha 93:6" },
+  { "id": "muslim-1162", "type": "hadith", "title": "Sahih Muslim", "reference": "Book of Fasting, hadith 1162", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "muslim-2276", "type": "hadith", "title": "Sahih Muslim", "reference": "Book of Virtues, hadith 2276", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "muslim-162", "type": "hadith", "title": "Sahih Muslim", "reference": "Book of Faith, hadith 162", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-5101", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Marriage, hadith 5101", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-lineage", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, chapter heading on the sending of the Prophet; exact location to be confirmed", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "tirmidhi-3619", "type": "hadith", "title": "Jami' at-Tirmidhi", "reference": "Book of Virtues, hadith 3619; grading to be confirmed", "numbering": "Ahmad Shakir" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Sections on the lineage and family of the Prophet, his birth, and the forty years before prophethood; pages to be confirmed against the reference edition" }
+]

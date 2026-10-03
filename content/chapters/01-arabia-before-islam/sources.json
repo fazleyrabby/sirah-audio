@@ -1,0 +1,22 @@
+[
+  { "id": "quran-30-2-4", "type": "quran", "title": "Qur'an", "reference": "Surah ar-Rum 30:2-4" },
+  { "id": "quran-14-37", "type": "quran", "title": "Qur'an", "reference": "Surah Ibrahim 14:37" },
+  { "id": "quran-2-127", "type": "quran", "title": "Qur'an", "reference": "Surah al-Baqarah 2:127" },
+  { "id": "quran-3-96", "type": "quran", "title": "Qur'an", "reference": "Surah Al Imran 3:96" },
+  { "id": "quran-106-1-2", "type": "quran", "title": "Qur'an", "reference": "Surah Quraysh 106:1-2" },
+  { "id": "quran-16-120-123", "type": "quran", "title": "Qur'an", "reference": "Surah an-Nahl 16:120-123" },
+  { "id": "quran-53-19-20", "type": "quran", "title": "Qur'an", "reference": "Surah an-Najm 53:19-20" },
+  { "id": "quran-31-25", "type": "quran", "title": "Qur'an", "reference": "Surah Luqman 31:25" },
+  { "id": "quran-39-3", "type": "quran", "title": "Qur'an", "reference": "Surah az-Zumar 39:3" },
+  { "id": "quran-5-90", "type": "quran", "title": "Qur'an", "reference": "Surah al-Ma'idah 5:90" },
+  { "id": "quran-16-58-59", "type": "quran", "title": "Qur'an", "reference": "Surah an-Nahl 16:58-59" },
+  { "id": "quran-81-8-9", "type": "quran", "title": "Qur'an", "reference": "Surah at-Takwir 81:8-9" },
+  { "id": "bukhari-3521", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Virtues, hadith 3521", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "muslim-2856", "type": "hadith", "title": "Sahih Muslim", "reference": "Book of Paradise, hadith 2856", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4287", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Military Expeditions, hadith 4287", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "muslim-1781", "type": "hadith", "title": "Sahih Muslim", "reference": "Book of Jihad and Expeditions, hadith 1781", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3826", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3826", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3827", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3827", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3828", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3828", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Opening sections on the location and nature of the Arab tribes, their rule, religions and society; pages to be confirmed against the reference edition" }
+]

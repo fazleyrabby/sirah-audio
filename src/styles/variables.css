@@ -1,0 +1,28 @@
+:root {
+  /* Restrained warm palette (SPEC 67) */
+  --background: #14110e;
+  --surface: #1f1a16;
+  --surface-raised: #2a231d;
+  --line: rgb(243 236 224 / 14%);
+  --text: #f3ece0;
+  --text-muted: #b9ab93;
+  --accent: #d9ac62;
+  --accent-ink: #1b140b;
+
+  --serif: "Cormorant Garamond", "Noto Serif Bengali", "Amiri", Georgia, serif;
+  --sans: "Hind Siliguri", "Amiri", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --arabic: "Amiri", "Geeza Pro", "Noto Naskh Arabic", serif;
+
+  --gutter: 20px;
+  --touch: 48px;
+  --radius: 14px;
+  --ui: 200ms;
+
+  color-scheme: dark;
+}
+
+:lang(bn) {
+  /* Bengali needs more height so conjuncts and vowel signs are never clipped (SPEC 66) */
+  --serif: "Noto Serif Bengali", "Cormorant Garamond", "Amiri", serif;
+  line-height: 1.75;
+}
