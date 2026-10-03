@@ -1,0 +1,10 @@
+[
+  { "id": "quran-9-113", "type": "quran", "title": "Qur'an", "reference": "Surah at-Tawbah 9:113" },
+  { "id": "quran-28-56", "type": "quran", "title": "Qur'an", "reference": "Surah al-Qasas 28:56" },
+  { "id": "bukhari-3", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Beginning of Revelation, hadith 3", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-1360", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Funerals, hadith 1360", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3884", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3884", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3896", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3896", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "muslim-2435", "type": "hadith", "title": "Sahih Muslim", "reference": "Book of the Virtues of the Companions, hadith 2435", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Section on the year of grief: the deaths of Abu Talib and Khadijah; pages to be confirmed against the reference edition" }
+]

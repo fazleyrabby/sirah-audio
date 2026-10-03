@@ -1,0 +1,11 @@
+[
+  { "id": "bukhari-371", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Prayer, hadith 371", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-2328", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Cultivation, hadith 2328; number to be confirmed", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-2617", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Gifts, hadith 2617; number to be confirmed", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3701", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Virtues of the Companions, hadith 3701", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3876", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3876", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4196", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Military Expeditions, hadith 4196", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4210", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Military Expeditions, hadith 4210", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4230", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Military Expeditions, hadith 4230", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Section on the conquest of Khaybar; pages to be confirmed against the reference edition" }
+]

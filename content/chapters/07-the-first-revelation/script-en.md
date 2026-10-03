@@ -82,7 +82,7 @@ You honour your guest.
 And you help those who are struck by hardship." <!-- c07-011 -->
 
 She did not answer with reassurance alone.
-She answered by describing the character she knew. <!-- n -->
+She answered by describing the character she knew. <!-- c07-011 -->
 
 ## s05 -- Waraqah
 Image: makkah/homes-night.svg | pan-right | Flat-roofed houses at night with a few lamp-lit windows. No figures.
@@ -134,4 +134,4 @@ And keep away from all defilement." <!-- c07-017 -->
 After that, the narration says, the revelation came strongly and without interruption. <!-- c07-016 -->
 
 The time of solitude on the mountain was over.
-The time of the message had begun. <!-- n -->
+The time of the message had begun. <!-- c07-016 c07-017 -->

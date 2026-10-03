@@ -1,0 +1,15 @@
+[
+  { "id": "quran-16-106", "type": "quran", "title": "Qur'an", "reference": "Surah an-Nahl 16:106" },
+  { "id": "quran-29-2", "type": "quran", "title": "Qur'an", "reference": "Surah al-Ankabut 29:2" },
+  { "id": "bukhari-240", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Ablution, hadith 240", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-2091", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Sales, hadith 2091", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-520", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Prayer, hadith 520", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3612", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Virtues, hadith 3612", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3678", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Virtues of the Companions, hadith 3678", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3754", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Virtues of the Companions, hadith 3754", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3852", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3852", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3856", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3856", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "muslim-2797", "type": "hadith", "title": "Sahih Muslim", "reference": "Book of the Description of the Hypocrites, hadith 2797", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "ibnmajah-150", "type": "hadith", "title": "Sunan Ibn Majah", "reference": "Introduction, hadith 150", "numbering": "Fu'ad Abd al-Baqi", "grade": "hasan sahih", "gradedBy": "al-Albani" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Section on the persecution of the believers; pages to be confirmed against the reference edition" }
+]

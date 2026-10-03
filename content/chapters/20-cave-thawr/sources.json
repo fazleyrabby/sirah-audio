@@ -1,0 +1,8 @@
+[
+  { "id": "quran-9-40", "type": "quran", "title": "Qur'an", "reference": "Surah at-Tawbah 9:40" },
+  { "id": "bukhari-3653", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Virtues of the Companions, hadith 3653", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3905", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3905", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3906", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3906", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3922", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3922", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Section on the migration of the Prophet: in the cave; pages to be confirmed against the reference edition" }
+]

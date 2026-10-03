@@ -1,0 +1,13 @@
+{
+  "model": "gemini-3.8-flash-tts",
+  "en": {
+    "voice": "en-us-storyteller-9",
+    "style": "Warm, natural, unhurried English documentary narration. Careful Arabic pronunciation. Speak the transcript exactly. Voice only, no music or sound effects.",
+    "honorific": ", peace be upon him,"
+  },
+  "bn": {
+    "voice": "en-us-storyteller-9",
+    "style": "Warm, natural, unhurried Bengali documentary narration. Careful pronunciation of Arabic-derived words. Speak the transcript exactly. Voice only, no music or sound effects.",
+    "honorific": " সাল্লাল্লাহু আলাইহি ওয়া সাল্লাম"
+  }
+}

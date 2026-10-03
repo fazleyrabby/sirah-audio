@@ -1,0 +1,9 @@
+[
+  { "id": "quran-34-28", "type": "quran", "title": "Qur'an", "reference": "Surah Saba 34:28" },
+  { "id": "quran-3-64", "type": "quran", "title": "Qur'an", "reference": "Surah Al Imran 3:64" },
+  { "id": "bukhari-7", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Beginning of Revelation, hadith 7", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-65", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Knowledge, hadith 65; number to be confirmed", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4424", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Military Expeditions, hadith 4424", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "muslim-1774", "type": "hadith", "title": "Sahih Muslim", "reference": "Book of Jihad and Expeditions, hadith 1774", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Section on the Prophet's letters to kings and rulers; pages to be confirmed against the reference edition" }
+]

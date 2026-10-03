@@ -1,0 +1,15 @@
+[
+  { "id": "quran-33-9", "type": "quran", "title": "Qur'an", "reference": "Surah al-Ahzab 33:9" },
+  { "id": "quran-33-10-11", "type": "quran", "title": "Qur'an", "reference": "Surah al-Ahzab 33:10-11" },
+  { "id": "quran-33-22", "type": "quran", "title": "Qur'an", "reference": "Surah al-Ahzab 33:22" },
+  { "id": "bukhari-4099", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Military Expeditions, hadith 4099", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4100", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Military Expeditions, hadith 4100", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4101", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Military Expeditions, hadith 4101", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4104", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Military Expeditions, hadith 4104", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4106", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Military Expeditions, hadith 4106", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4109", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Military Expeditions, hadith 4109", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4115", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Military Expeditions, hadith 4115", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4121", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Military Expeditions, hadith 4121", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "muslim-1788", "type": "hadith", "title": "Sahih Muslim", "reference": "Book of Jihad and Expeditions, hadith 1788", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Sections on the battle of the Confederates and Banu Qurayzah; pages to be confirmed against the reference edition" }
+]

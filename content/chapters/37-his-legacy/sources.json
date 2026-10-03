@@ -1,0 +1,18 @@
+[
+  { "id": "quran-68-4", "type": "quran", "title": "Qur'an", "reference": "Surah al-Qalam 68:4" },
+  { "id": "quran-21-107", "type": "quran", "title": "Qur'an", "reference": "Surah al-Anbiya 21:107" },
+  { "id": "quran-33-21", "type": "quran", "title": "Qur'an", "reference": "Surah al-Ahzab 33:21" },
+  { "id": "quran-33-56", "type": "quran", "title": "Qur'an", "reference": "Surah al-Ahzab 33:56" },
+  { "id": "bukhari-2739", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Wills, hadith 2739", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-2916", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Jihad, hadith 2916", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3093", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the One-Fifth, hadith 3093", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3231", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Beginning of Creation, hadith 3231", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3461", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Prophets, hadith 3461", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4318", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Military Expeditions, hadith 4318-4319", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4986", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Virtues of the Qur'an, hadith 4986", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-6038", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Good Manners, hadith 6038", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "muslim-746", "type": "hadith", "title": "Sahih Muslim", "reference": "Book of the Prayer of Travellers, hadith 746", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "muslim-1218", "type": "hadith", "title": "Sahih Muslim", "reference": "Book of Hajj, hadith 1218", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "muslim-1780", "type": "hadith", "title": "Sahih Muslim", "reference": "Book of Jihad and Expeditions, hadith 1780", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "tirmidhi-3895", "type": "hadith", "title": "Jami' at-Tirmidhi", "reference": "Book of Virtues, hadith 3895", "numbering": "Ahmad Shakir", "grade": "sahih", "gradedBy": "al-Albani" }
+]

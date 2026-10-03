@@ -55,3 +55,48 @@ fetched (HTTP 403).
 | Sahih Muslim 2436 (did not marry another while she lived) | Content match. Number from memory |
 | Qur'an 93:6-8 | Verse content checked |
 | Hilf al-Fudul saying, Black Stone arbitration | **Not checked**; narrated as Seerah reports. Graded references (Musnad Ahmad) to be added by the reviewer |
+
+## 2026-10-03 -- chapters 08 to 37 (English only)
+
+Method as above: each hadith cited from al-Bukhari, Ibn Majah, at-Tirmidhi and Abu Dawud was fetched by
+number from the dataset and compared with the script before or while the chapter was written. Sahih Muslim
+was searched by text. Each claim's `notes` field in `claims.json` says whether it was machine-checked or
+written from memory.
+
+| Area | Result |
+|------|--------|
+| Sahih al-Bukhari, all numbers cited in chapters 08-37 | Number and opening text match. Long narrations (3905, 3906, 3911, 2731, 4280, 4043, 3668) were read in full |
+| Later parts of long narrations | Where the lookup was truncated, the remainder was written from memory and is marked so in the claim notes (for example 3861, 3887, 4330, 4210, 4372, 4449, 4454, 3654) |
+| Sahih Muslim (832, 162, 2797, 1763, 1779, 1788, 1218, 1297, 2450, 2435, 746, 1780) | Content found by text search. Abd al-Baqi numbers are from memory; Muslim 1774 was not searched |
+| Ibn Majah 150, Tirmidhi 3681, 3925, 2485, 3618, 3895, Abu Dawud 499, 4734, 3141 | Match, with the gradings recorded in each `sources.json` |
+| Musnad Ahmad (1740 Umm Salamah on Abyssinia; 14456 Jabir on the second pledge; 2216 captives of Badr) | **Not checked**: not in the datasets. Numbers and gradings from memory. Narrated at grade C with attribution |
+| Qur'an verses | A sample was checked against the dataset; the rest are **not checked**. All English renderings are paraphrases of meaning |
+| Seerah reports (grade C) | **Not checked**; from memory of Ar-Raheeq and Ibn Hisham |
+
+Reports deliberately left out or named as unestablished: "the sun in my right hand" (ch. 10), the detailed
+stories of Umar's conversion (ch. 12), the supplication at Ta'if (ch. 15), the spider and the doves (ch. 20),
+Umm Ma'bad (ch. 21), "Tala'a al-badru" (ch. 22), "Go, for you are free" (ch. 31).
+
+Open points for the reviewer, also flagged in the claim notes:
+
+- Chapter 19: the words at al-Hazwarah may belong to the conquest of Makkah, not the night of Hijrah.
+- Chapter 25: the supplication is placed "the night before"; the narration says the day of Badr.
+- Chapter 27: the content of Sa'd ibn Mu'adh's judgement on Banu Qurayzah is not stated.
+- Chapter 29: the later fate of the woman who poisoned the sheep is not stated.
+- Chapter 31: the few individuals excluded from the amnesty are not mentioned.
+- Chapter 33: the expedition to Tabuk has no chapter in the outline.
+
+Audit correction (2026-10-03): Removed the al-Hazwarah quotation from both chapter 19 scripts and their claim/source ledger. Tirmidhi 3925 supports the wording but gives no date; its placement as a farewell on the night of Hijrah implied an unsupported occasion. Revised the age sentence because his infancy with Banu Sa'd was outside Makkah. In chapter 25, revised both scene titles and narration to place the supplication on the day of Badr, as Muslim dataset no. 4588 explicitly says. These changes remain unverified pending a qualified review.
+
+Further reference checks (2026-10-03): The public Sunnah.com entries confirm Sahih Muslim 1763 (day of Badr supplication), 1774a (letters to Chosroes, Caesar, the Negus and other rulers), and 2856b (Amr ibn Amir al-Khuza'i first instituted the sa'ibah). The local Muslim dataset uses a different numbering scheme. Chapter 30 now limits the Hudaybiyyah timing to the Heraclius letter supported by Bukhari 7. These are text/number checks, not a qualified historical sign-off.
+
+The local Abu Dawud 499 and Ibn Majah 150 records label al-Albani's grade **Hasan Sahih**, rather than the shorter "hasan" previously displayed. Updated those source records to preserve the listed grade exactly. Human grade review remains required.
+
+Audio-preparation source pass (2026-10-03): Reduced English and Bengali `<!-- n -->` paragraphs from 109 each to 12 each. Linked factual framing to existing claim IDs where those claims support it, and removed or rewrote speculative thoughts and overstatements (including chapter 15's invented "remembered" thoughts, chapter 31's imagined gathering before him, and chapter 32's assumption about his motive for distributing spoils). Khabbab's work as a blacksmith is supported by Bukhari 2091 in the local dataset; added c11-012 and kept it `unverified`. This is a source-linking and wording pass, not human authentication. The 12 remaining `n` paragraphs are transitional or a closing supplication and still need human editorial review.
+
+## 2026-10-03 -- Bengali scripts, chapters 08 to 37
+
+Written from the English scripts and the same claim ledger; the build confirms identical scene ids and claim
+ids in both languages for all 37 chapters. No separate source check was made for the Bengali. Qur'an
+renderings are paraphrases of meaning in Bengali, not a named translation. Wording, transliteration of names
+and honorifics await the Bengali reviewer.

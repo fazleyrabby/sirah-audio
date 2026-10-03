@@ -7,3 +7,6 @@ dist/
 public/content/
 src/chapters/index.generated.json
 content/chapters/*/tts-*.json
+auditions/
+:memory:.ses
+__pycache__/

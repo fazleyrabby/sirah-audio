@@ -1,0 +1,15 @@
+[
+  { "id": "quran-26-214", "type": "quran", "title": "Qur'an", "reference": "Surah ash-Shu'ara 26:214" },
+  { "id": "quran-15-94", "type": "quran", "title": "Qur'an", "reference": "Surah al-Hijr 15:94" },
+  { "id": "quran-111-1-2", "type": "quran", "title": "Qur'an", "reference": "Surah al-Masad 111:1-2" },
+  { "id": "quran-38-4-5", "type": "quran", "title": "Qur'an", "reference": "Surah Sad 38:4-5" },
+  { "id": "quran-52-29-30", "type": "quran", "title": "Qur'an", "reference": "Surah at-Tur 52:29-30" },
+  { "id": "quran-15-6", "type": "quran", "title": "Qur'an", "reference": "Surah al-Hijr 15:6" },
+  { "id": "quran-41-26", "type": "quran", "title": "Qur'an", "reference": "Surah Fussilat 41:26" },
+  { "id": "bukhari-4770", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Commentary on the Qur'an, hadith 4770", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4971", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Commentary on the Qur'an, hadith 4971", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-2753", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Wills, hadith 2753", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3884", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3884", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "ibnmajah-150", "type": "hadith", "title": "Sunan Ibn Majah", "reference": "Introduction, hadith 150", "numbering": "Fu'ad Abd al-Baqi", "grade": "hasan sahih", "gradedBy": "al-Albani" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Sections on the open call and the delegations of Quraysh to Abu Talib; pages to be confirmed against the reference edition" }
+]

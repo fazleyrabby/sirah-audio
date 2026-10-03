@@ -418,3 +418,24 @@ a.row:hover {
 [data-route="chapter"] .reader {
   padding-top: 84px;
 }
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 18px var(--gutter) max(22px, env(safe-area-inset-bottom));
+  border-top: 1px solid var(--line);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.visits__count {
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}

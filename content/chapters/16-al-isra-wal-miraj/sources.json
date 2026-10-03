@@ -1,0 +1,9 @@
+[
+  { "id": "quran-17-1", "type": "quran", "title": "Qur'an", "reference": "Surah al-Isra 17:1" },
+  { "id": "quran-53-13-18", "type": "quran", "title": "Qur'an", "reference": "Surah an-Najm 53:13-18" },
+  { "id": "bukhari-349", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Prayer, hadith 349", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3886", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3886", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3887", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3887", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "muslim-162", "type": "hadith", "title": "Sahih Muslim", "reference": "Book of Faith, hadith 162", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Section on al-Isra' and al-Mi'raj; pages to be confirmed against the reference edition" }
+]

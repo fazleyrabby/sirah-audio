@@ -1,0 +1,16 @@
+{
+  "en": {
+    "voice": "en-US-AndrewNeural",
+    "lang": "en-US",
+    "rate": "-8%",
+    "pitch": "0%",
+    "honorific": ", peace be upon him,"
+  },
+  "bn": {
+    "voice": "bn-BD-PradeepNeural",
+    "lang": "bn-BD",
+    "rate": "-8%",
+    "pitch": "0%",
+    "honorific": " সাল্লাল্লাহু আলাইহি ওয়া সাল্লাম"
+  }
+}

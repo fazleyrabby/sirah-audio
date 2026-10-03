@@ -1,0 +1,10 @@
+[
+  { "id": "quran-9-108", "type": "quran", "title": "Qur'an", "reference": "Surah at-Tawbah 9:108" },
+  { "id": "bukhari-3906", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3906", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3911", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3911", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3925", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3925", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3932", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3932", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3934", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3934", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "tirmidhi-2485", "type": "hadith", "title": "Jami' at-Tirmidhi", "reference": "Book of the Description of the Day of Judgement, hadith 2485", "numbering": "Ahmad Shakir", "grade": "sahih", "gradedBy": "al-Albani" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Sections on Quba and entering Madinah; pages to be confirmed against the reference edition" }
+]

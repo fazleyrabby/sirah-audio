@@ -103,7 +103,7 @@ const ABOUT: Record<Language, string> = {
     <p>The Prophet ﷺ is never depicted. Neither are his Companions, nor any other person of that time, nor anything of the unseen. The scenes show land, sky, buildings and maps.</p>
     <p class="disclaimer">${t("disclaimer", "en")}</p>
     <h2>Privacy</h2>
-    <p>There are no accounts, no advertising and no tracking. Your listening progress is stored only on your own device.</p>
+    <p>There are no accounts and no advertising. Your listening progress is stored only on your own device. The only thing counted is the total number of visits to the site, once per browser session; no personal information is collected.</p>
     <h2>Reporting an error</h2>
     <p>If you find a mistake in a source or in the narration, please tell us so it can be corrected. A contact address will be published here.</p>`,
   bn: `
@@ -114,7 +114,7 @@ const ABOUT: Record<Language, string> = {
     <p>নবী ﷺ-কে কখনো চিত্রিত করা হয় না। তাঁর সাহাবিগণ, সে যুগের অন্য কোনো ব্যক্তি, কিংবা গায়েবের কোনো কিছুও নয়। দৃশ্যে থাকে ভূমি, আকাশ, স্থাপনা ও মানচিত্র।</p>
     <p class="disclaimer">${t("disclaimer", "bn")}</p>
     <h2>গোপনীয়তা</h2>
-    <p>কোনো অ্যাকাউন্ট, বিজ্ঞাপন বা ট্র্যাকিং নেই। আপনার শোনার অগ্রগতি কেবল আপনার নিজের ডিভাইসেই সংরক্ষিত থাকে।</p>
+    <p>কোনো অ্যাকাউন্ট বা বিজ্ঞাপন নেই। আপনার শোনার অগ্রগতি কেবল আপনার নিজের ডিভাইসেই সংরক্ষিত থাকে। শুধু সাইটে মোট ভিজিটের সংখ্যা গোনা হয়, প্রতি ব্রাউজার-সেশনে একবার; কোনো ব্যক্তিগত তথ্য সংগ্রহ করা হয় না।</p>
     <h2>ভুল জানানো</h2>
     <p>সূত্রে বা বর্ণনায় কোনো ভুল পেলে আমাদের জানান, যাতে তা সংশোধন করা যায়। যোগাযোগের ঠিকানা এখানে প্রকাশ করা হবে।</p>`,
 };

@@ -1,0 +1,7 @@
+[
+  { "id": "quran-46-29", "type": "quran", "title": "Qur'an", "reference": "Surah al-Ahqaf 46:29" },
+  { "id": "bukhari-3139", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the One-Fifth, hadith 3139", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3231", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Beginning of Creation, hadith 3231", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4921", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Commentary on the Qur'an, hadith 4921", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Section on the journey to at-Ta'if; pages to be confirmed against the reference edition" }
+]

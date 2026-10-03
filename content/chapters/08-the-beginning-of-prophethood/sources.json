@@ -1,0 +1,10 @@
+[
+  { "id": "quran-74-1-7", "type": "quran", "title": "Qur'an", "reference": "Surah al-Muddaththir 74:1-7" },
+  { "id": "quran-75-16-19", "type": "quran", "title": "Qur'an", "reference": "Surah al-Qiyamah 75:16-19" },
+  { "id": "quran-73-1-5", "type": "quran", "title": "Qur'an", "reference": "Surah al-Muzzammil 73:1-5" },
+  { "id": "bukhari-2", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Beginning of Revelation, hadith 2", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Beginning of Revelation, hadith 4", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-5", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Beginning of Revelation, hadith 5", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "muslim-832", "type": "hadith", "title": "Sahih Muslim", "reference": "Book of the Prayer of Travellers, hadith 832", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Section on the phases of the call, the secret call; pages to be confirmed against the reference edition" }
+]

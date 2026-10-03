@@ -1,0 +1,10 @@
+[
+  { "id": "bukhari-18", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Faith, hadith 18", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3777", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3777", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3889", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3889", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3892", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3892", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3925", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3925", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "abudawud-4734", "type": "hadith", "title": "Sunan Abu Dawud", "reference": "Book of the Sunnah, hadith 4734", "numbering": "Muhyi ad-Din Abd al-Hamid", "grade": "sahih", "gradedBy": "al-Albani" },
+  { "id": "ahmad-14456", "type": "hadith", "title": "Musnad Ahmad", "reference": "Hadith of Jabir on the second pledge of Aqabah, hadith 14456; number and grading to be confirmed", "numbering": "Shu'ayb al-Arna'ut" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Sections on calling the tribes, the six of Yathrib, and the first and second pledges of Aqabah; pages to be confirmed against the reference edition" }
+]

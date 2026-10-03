@@ -1,9 +1,10 @@
 {
   "en": {
-    "engine": "kokoro",
-    "voice": "am_michael",
-    "speed": 0.88,
-    "lang": "en-us",
+    "engine": "edge-tts",
+    "voice": "en-US-AndrewNeural",
+    "speed": 0.92,
+    "rate": "-8%",
+    "lang": "en-US",
     "gaps": { "lead": 0.8, "line": 0.42, "paragraph": 0.95, "scene": 1.8, "tail": 1.6 },
     "honorific": "peace be upon him",
     "pronunciation": {
@@ -12,6 +13,14 @@
       "Aishah": "Aa-isha",
       "Waraqah": "Waraka",
       "Nawfal": "Nowfal",
+      "ibn": "ib-en",
+      "Ibn": "Iben",
+      "Ali": "Alee",
+      "Umar": "Omar",
+      "Uthman": "Othmaan",
+      "Abu": "Aboo",
+      "Madinah": "Madeenah",
+      "Bilal": "Bilaal",
       "Quraysh": "Kooraysh",
       "Ka'bah": "Kaaba",
       "Jibril": "Jibreel",
@@ -37,5 +46,14 @@
       "Sasanians": "Sasaanians",
       "Qur'an": "Quran"
     }
+  },
+  "bn": {
+    "engine": "edge-tts",
+    "voice": "bn-BD-PradeepNeural",
+    "speed": 0.92,
+    "rate": "-8%",
+    "lang": "bn-BD",
+    "gaps": { "lead": 0.8, "line": 0.42, "paragraph": 0.95, "scene": 1.8, "tail": 1.6 },
+    "honorific": "সাল্লাল্লাহু আলাইহি ওয়া সাল্লাম"
   }
 }

@@ -1,0 +1,12 @@
+[
+  { "id": "quran-4-171", "type": "quran", "title": "Qur'an", "reference": "Surah an-Nisa 4:171" },
+  { "id": "bukhari-1245", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Funerals, hadith 1245", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3684", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Virtues of the Companions, hadith 3684", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3864", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3864", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3865", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3865", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3876", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3876", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3877", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3877", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "tirmidhi-3681", "type": "hadith", "title": "Jami' at-Tirmidhi", "reference": "Book of Virtues, hadith 3681", "numbering": "Ahmad Shakir", "grade": "sahih", "gradedBy": "al-Albani" },
+  { "id": "ahmad-1740", "type": "hadith", "title": "Musnad Ahmad", "reference": "Hadith of Umm Salamah on the emigration to Abyssinia, hadith 1740; number and grading to be confirmed", "numbering": "Shu'ayb al-Arna'ut" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Sections on the two migrations to Abyssinia and the conversion of Hamzah and Umar; pages to be confirmed against the reference edition" }
+]

@@ -1,0 +1,10 @@
+[
+  { "id": "quran-48-1", "type": "quran", "title": "Qur'an", "reference": "Surah al-Fath 48:1" },
+  { "id": "quran-48-18", "type": "quran", "title": "Qur'an", "reference": "Surah al-Fath 48:18" },
+  { "id": "bukhari-2731", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Conditions, hadith 2731-2732", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4150", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Military Expeditions, hadith 4150", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4154", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Military Expeditions, hadith 4154", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4177", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Military Expeditions, hadith 4177", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4178", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Military Expeditions, hadith 4178", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Section on the treaty of al-Hudaybiyyah; pages to be confirmed against the reference edition" }
+]

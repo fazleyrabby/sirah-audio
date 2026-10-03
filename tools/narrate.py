@@ -25,6 +25,45 @@ MODELS = ROOT / ".tools" / "models"
 CACHE = ROOT / ".tools" / "cache"
 
 
+def load_lexicon(config):
+    path = config.get("ipa_lexicon")
+    if not path:
+        return {}
+    lexicon = json.loads((ROOT / path).read_text())
+    if not isinstance(lexicon, dict) or not all(
+        isinstance(word, str) and word and isinstance(ipa, str) and ipa
+        for word, ipa in lexicon.items()
+    ):
+        raise ValueError(f"invalid IPA lexicon: {path}")
+    return lexicon
+
+
+def phonemize_with_lexicon(tokenizer, text, lang, lexicon):
+    """Phonemize ordinary text, replacing whole Arabic terms with IPA entries."""
+    if not lexicon:
+        return tokenizer.phonemize(text, lang)
+    alternatives = "|".join(re.escape(word) for word in sorted(lexicon, key=len, reverse=True))
+    pattern = re.compile(rf"(?<![\w])(?P<word>{alternatives})(?P<possessive>['’]s)?(?![\w])", re.IGNORECASE)
+    lookup = {word.casefold(): ipa for word, ipa in lexicon.items()}
+    parts = []
+    cursor = 0
+    for match in pattern.finditer(text):
+        if match.start() > cursor:
+            parts.append(tokenizer.phonemize(text[cursor:match.start()], lang))
+        ipa = lookup[match.group("word").casefold()]
+        parts.append(ipa + ("z" if match.group("possessive") else ""))
+        cursor = match.end()
+    if cursor < len(text):
+        parts.append(tokenizer.phonemize(text[cursor:], lang))
+    return " ".join(part for part in parts if part)
+
+
+def narration_key(config, lexicon):
+    settings = {key: config[key] for key in ("engine", "voice", "speed", "lang", "gaps")}
+    settings["ipa_lexicon"] = lexicon
+    return hashlib.sha1(json.dumps(settings, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+
+
 def voice_style(kokoro, spec):
     """A voice name, or a blend such as "am_michael:0.6,bm_george:0.4"."""
     if ":" not in spec:
@@ -43,12 +82,17 @@ def trim(samples, rate, pad=0.03, threshold=0.004):
     return samples[start:end]
 
 
-def synthesise(kokoro, text, config, voice):
-    key = hashlib.sha1(f"{config['voice']}|{config['speed']}|{config['lang']}|{text}".encode()).hexdigest()
+def synthesise(kokoro, text, config, voice, lexicon, settings_key):
+    key = hashlib.sha1(f"{settings_key}|{text}".encode()).hexdigest()
     cached = CACHE / f"{key}.npy"
     if cached.exists():
         return np.load(cached)
-    samples, rate = kokoro.create(text, voice=voice, speed=config["speed"], lang=config["lang"])
+    if lexicon:
+        phonemes = phonemize_with_lexicon(kokoro.tokenizer, text, config["lang"], lexicon)
+        samples, rate = kokoro.create(phonemes, voice=voice, speed=config["speed"],
+                                      lang=config["lang"], is_phonemes=True)
+    else:
+        samples, rate = kokoro.create(text, voice=voice, speed=config["speed"], lang=config["lang"])
     samples = trim(np.asarray(samples, dtype=np.float32), rate)
     # Short fades so joins never click.
     fade = min(int(0.008 * rate), len(samples) // 2)
@@ -84,14 +128,15 @@ def encode(wav, mp3):
 
 
 def narrate_chapter(kokoro, directory, language, config, force):
+    lexicon = load_lexicon(config)
+    settings_key = narration_key(config, lexicon)
     manifest = json.loads((directory / f"tts-{language}.json").read_text())
     items = manifest["items"]
     audio = ROOT / manifest["audio"]
     timings_file = directory / f"timings-{language}.json"
     if not force and audio.exists() and timings_file.exists():
         previous = json.loads(timings_file.read_text())
-        same_voice = previous.get("voice") == config["voice"] and previous.get("speed") == config["speed"]
-        if same_voice and [s["hash"] for s in previous["segments"]] == [i["hash"] for i in items]:
+        if previous.get("settings_key") == settings_key and [s["hash"] for s in previous["segments"]] == [i["hash"] for i in items]:
             print(f"{directory.name} [{language}]: up to date")
             return
 
@@ -103,7 +148,7 @@ def narrate_chapter(kokoro, directory, language, config, force):
     cursor = gaps["lead"]
     segments = []
     for index, item in enumerate(items):
-        samples = synthesise(kokoro, item["spoken"], config, voice)
+        samples = synthesise(kokoro, item["spoken"], config, voice, lexicon, settings_key)
         start = cursor
         cursor += len(samples) / rate
         segments.append({"id": item["id"], "hash": item["hash"], "start": round(start, 3), "end": round(cursor, 3)})
@@ -126,7 +171,8 @@ def narrate_chapter(kokoro, directory, language, config, force):
     encode(wav, audio)
     wav.unlink()
     timings_file.write_text(json.dumps(
-        {"voice": config["voice"], "speed": config["speed"], "duration": round(cursor, 3), "segments": segments},
+        {"voice": config["voice"], "speed": config["speed"], "settings_key": settings_key,
+         "duration": round(cursor, 3), "segments": segments},
         indent=1) + "\n")
     print(f"\r{directory.name} [{language}]: {cursor / 60:.1f} min -> {audio.relative_to(ROOT)}")
 
@@ -146,11 +192,13 @@ def main():
         config["voice"] = args.voice
     if args.speed:
         config["speed"] = args.speed
+    lexicon = load_lexicon(config)
+    settings_key = narration_key(config, lexicon)
     kokoro = Kokoro(str(MODELS / "kokoro-v1.0.onnx"), str(MODELS / "voices-v1.0.bin"))
 
     if args.sample:
         text, out = args.sample
-        samples = synthesise(kokoro, text, config, voice_style(kokoro, config["voice"]))
+        samples = synthesise(kokoro, text, config, voice_style(kokoro, config["voice"]), lexicon, settings_key)
         CACHE.mkdir(parents=True, exist_ok=True)
         wav = CACHE / "sample.wav"
         sf.write(wav, samples, 24000)

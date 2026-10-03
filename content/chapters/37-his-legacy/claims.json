@@ -1,0 +1,18 @@
+[
+  { "id": "c37-001", "sceneId": "s01", "statement": "Amr ibn al-Harith (brother of his wife Juwayriyah): he left no dirham, dinar, slave or anything else except his white mule, his weapons and land he had given as charity.", "grade": "B", "sources": ["bukhari-2739"], "status": "unverified", "notes": "Direct speech. Machine-checked." },
+  { "id": "c37-002", "sceneId": "s01", "statement": "Aishah: he died with his armour pledged for thirty sa' of barley.", "grade": "B", "sources": ["bukhari-2916"], "status": "unverified", "notes": "Direct speech. Machine-checked." },
+  { "id": "c37-003", "sceneId": "s01", "statement": "He said: we are not inherited from; what we leave is charity.", "grade": "B", "sources": ["bukhari-3093"], "status": "unverified", "notes": "Direct speech. Machine-checked (quoted by Abu Bakr)." },
+  { "id": "c37-004", "sceneId": "s02", "statement": "Aishah, asked about his character: 'Do you not read the Qur'an? The character of the Prophet of Allah was the Qur'an.'", "grade": "B", "sources": ["muslim-746"], "status": "unverified", "notes": "Direct speech. Content machine-checked in the Muslim dataset (no. 1739); Abd al-Baqi number from memory." },
+  { "id": "c37-005", "sceneId": "s02", "statement": "Qur'an 68:4.", "grade": "A", "sources": ["quran-68-4"], "status": "unverified" },
+  { "id": "c37-006", "sceneId": "s02", "statement": "Anas: I served him ten years; he never said 'uff' to me, nor 'why did you do that' or 'why did you not do that'.", "grade": "B", "sources": ["bukhari-6038"], "status": "unverified", "notes": "Direct speech. Machine-checked." },
+  { "id": "c37-007", "sceneId": "s02", "statement": "He said: the best of you is the best to his family, and I am the best of you to my family.", "grade": "B", "sources": ["tirmidhi-3895"], "status": "unverified", "notes": "Direct speech. Machine-checked; graded sahih (al-Albani, Ahmad Shakir)." },
+  { "id": "c37-008", "sceneId": "s03", "statement": "Qur'an 21:107.", "grade": "A", "sources": ["quran-21-107"], "status": "unverified" },
+  { "id": "c37-009", "sceneId": "s03", "statement": "At Ta'if he declined the destruction of those who harmed him and hoped for their descendants.", "grade": "B", "sources": ["bukhari-3231"], "status": "unverified", "notes": "See chapter 15." },
+  { "id": "c37-010", "sceneId": "s03", "statement": "At the conquest of Makkah he granted its people safety.", "grade": "B", "sources": ["muslim-1780"], "status": "unverified", "notes": "See chapter 31." },
+  { "id": "c37-011", "sceneId": "s03", "statement": "After Hunayn he returned the captive families of Hawazin.", "grade": "B", "sources": ["bukhari-4318"], "status": "unverified", "notes": "See chapter 32." },
+  { "id": "c37-012", "sceneId": "s04", "statement": "At Arafah he said he had left among them the Book of Allah.", "grade": "B", "sources": ["muslim-1218"], "status": "unverified", "notes": "See chapter 34." },
+  { "id": "c37-013", "sceneId": "s04", "statement": "The Qur'an was written by his scribes and memorised in his lifetime, and gathered into one collection under Abu Bakr.", "grade": "B", "sources": ["bukhari-4986"], "status": "unverified", "notes": "Machine-checked (Zayd ibn Thabit's narration)." },
+  { "id": "c37-014", "sceneId": "s04", "statement": "Qur'an 33:21.", "grade": "A", "sources": ["quran-33-21"], "status": "unverified" },
+  { "id": "c37-015", "sceneId": "s04", "statement": "He said: convey from me, even if it is one verse.", "grade": "B", "sources": ["bukhari-3461"], "status": "unverified", "notes": "Direct speech. Machine-checked." },
+  { "id": "c37-016", "sceneId": "s05", "statement": "Qur'an 33:56.", "grade": "A", "sources": ["quran-33-56"], "status": "unverified" }
+]

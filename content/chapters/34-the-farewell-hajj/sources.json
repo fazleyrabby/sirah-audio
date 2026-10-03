@@ -1,0 +1,12 @@
+[
+  { "id": "quran-5-3", "type": "quran", "title": "Qur'an", "reference": "Surah al-Ma'idah 5:3" },
+  { "id": "bukhari-45", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Faith, hadith 45", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-67", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Knowledge, hadith 67", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-1739", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Hajj, hadith 1739", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-1741", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Hajj, hadith 1741", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4402", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Military Expeditions, hadith 4402", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4406", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Military Expeditions, hadith 4406", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "muslim-1218", "type": "hadith", "title": "Sahih Muslim", "reference": "Book of Hajj, hadith 1218", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "muslim-1297", "type": "hadith", "title": "Sahih Muslim", "reference": "Book of Hajj, hadith 1297", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Section on the farewell pilgrimage; pages to be confirmed against the reference edition" }
+]

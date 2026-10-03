@@ -1,0 +1,10 @@
+[
+  { "id": "bukhari-3", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Beginning of Revelation, hadith 3", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-7", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Beginning of Revelation, hadith 7", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3660", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Virtues of the Companions, hadith 3660", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3661", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Virtues of the Companions, hadith 3661", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3727", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Virtues of the Companions, hadith 3727", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3861", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3861", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "muslim-832", "type": "hadith", "title": "Sahih Muslim", "reference": "Book of the Prayer of Travellers, hadith 832", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Section on the early converts; pages to be confirmed against the reference edition" }
+]

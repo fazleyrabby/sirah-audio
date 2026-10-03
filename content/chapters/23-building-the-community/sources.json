@@ -1,0 +1,17 @@
+[
+  { "id": "quran-59-9", "type": "quran", "title": "Qur'an", "reference": "Surah al-Hashr 59:9" },
+  { "id": "quran-2-144", "type": "quran", "title": "Qur'an", "reference": "Surah al-Baqarah 2:144" },
+  { "id": "bukhari-399", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Prayer, hadith 399", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-428", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Prayer, hadith 428", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-446", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Prayer, hadith 446; number to be confirmed", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-604", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Call to Prayer, hadith 604", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-2048", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Sales, hadith 2048", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-2630", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Gifts, hadith 2630", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3781", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3781", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3906", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3906", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3937", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3937", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-6452", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Softening the Heart, hadith 6452", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "abudawud-499", "type": "hadith", "title": "Sunan Abu Dawud", "reference": "Book of Prayer, hadith 499", "numbering": "Muhyi ad-Din Abd al-Hamid", "grade": "hasan sahih", "gradedBy": "al-Albani" },
+  { "id": "ibnmajah-150", "type": "hadith", "title": "Sunan Ibn Majah", "reference": "Introduction, hadith 150", "numbering": "Fu'ad Abd al-Baqi", "grade": "hasan sahih", "gradedBy": "al-Albani" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Section on building a new society: the Prophet's mosque and the brotherhood; pages to be confirmed against the reference edition" }
+]

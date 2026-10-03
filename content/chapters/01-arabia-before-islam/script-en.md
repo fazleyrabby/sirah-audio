@@ -4,7 +4,7 @@
 Image: desert/dunes-day.svg | pan-right | Empty desert dunes under a pale sky. No figures.
 Audio: Voice only.
 
-To understand the life of the Messenger of Allah ﷺ, we begin with the land into which he was born. <!-- n -->
+We begin with Arabia, the setting of this life. <!-- n -->
 
 Arabia is a vast peninsula, bounded by sea on three sides.
 The Red Sea lies to the west, the Arabian Sea to the south, and the Gulf to the east.
@@ -94,7 +94,7 @@ and of the infant girl who was buried alive. <!-- c01-022 -->
 Image: mountains/ridges-dusk.svg | pan-left | Layered mountain ridges at dusk. No figures.
 Audio: Voice only.
 
-Not everyone accepted the worship of idols. <!-- n -->
+Not everyone accepted the worship of idols. <!-- c01-024 -->
 
 There were Jewish communities in Arabia, among them the tribes of Yathrib.
 And there were Christian communities, among them the people of Najran. <!-- c01-023 -->
@@ -118,6 +118,6 @@ Audio: Voice only.
 This, then, was Arabia in the sixth century.
 A land without a king.
 A sacred House surrounded by idols.
-A people with noble qualities, and deep wrongs. <!-- n -->
+A people with noble qualities, and deep wrongs. <!-- c01-002 c01-009 c01-015 c01-019 c01-020 -->
 
-Into this world, in the town of Makkah, a child was about to be born. <!-- n -->
+The next chapter begins in Makkah. <!-- n -->

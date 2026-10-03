@@ -1,0 +1,9 @@
+[
+  { "id": "quran-4-77", "type": "quran", "title": "Qur'an", "reference": "Surah an-Nisa 4:77" },
+  { "id": "quran-22-39-40", "type": "quran", "title": "Qur'an", "reference": "Surah al-Hajj 22:39-40" },
+  { "id": "bukhari-1870", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Virtues of Madinah, hadith 1870", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-2294", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Sureties, hadith 2294", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3777", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3777", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4566", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Commentary on the Qur'an, hadith 4566", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Sections on the charter of Islamic alliance and the treaty with the Jews; pages to be confirmed against the reference edition" }
+]

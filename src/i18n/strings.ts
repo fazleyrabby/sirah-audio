@@ -50,6 +50,7 @@ const strings = {
   playNow: { en: "Play now", bn: "এখনই চালান" },
   cancel: { en: "Cancel", bn: "বাতিল" },
   completed: { en: "Completed", bn: "সম্পন্ন" },
+  visits: { en: "Visits", bn: "ভিজিট" },
   nowPlaying: { en: "Current chapter", bn: "বর্তমান অধ্যায়" },
   notInLanguage: {
     en: "This chapter is not yet available in English.",

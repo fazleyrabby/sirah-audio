@@ -1,0 +1,6 @@
+[
+  { "id": "quran-36-9", "type": "quran", "title": "Qur'an", "reference": "Surah Ya-Sin 36:9" },
+  { "id": "bukhari-3902", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3902", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3905", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3905", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Section on the migration of the Prophet: leaving the house; pages to be confirmed against the reference edition" }
+]

@@ -1,0 +1,7 @@
+[
+  { "id": "quran-8-30", "type": "quran", "title": "Qur'an", "reference": "Surah al-Anfal 8:30" },
+  { "id": "bukhari-3622", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Virtues, hadith 3622", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3905", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3905", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3925", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3925", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Sections on the vanguard of migration and the council in Dar an-Nadwah; pages to be confirmed against the reference edition" }
+]

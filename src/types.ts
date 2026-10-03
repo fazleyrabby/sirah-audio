@@ -74,7 +74,7 @@ export interface SourceReference {
   reference: string;
   numbering?: string;
   edition?: string;
-  grade?: "sahih" | "hasan";
+  grade?: "sahih" | "hasan" | "hasan sahih";
   gradedBy?: string;
   sceneIds?: string[];
   note?: Partial<Record<Language, string>>;

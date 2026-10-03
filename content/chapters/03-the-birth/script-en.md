@@ -82,5 +82,4 @@ and to learn the pure Arabic that was spoken there. <!-- c03-017 -->
 
 And so the first years of his life were spent not in Makkah, but among the tents of Banu Sa'd. <!-- c03-016 -->
 
-He had been born without a father, in a town of idols, in a land without a king.
 What those early years held is the subject of the chapters that follow. <!-- n -->

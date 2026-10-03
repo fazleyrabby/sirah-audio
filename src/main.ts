@@ -18,6 +18,7 @@ import { t } from "./i18n/strings.ts";
 import { mountPlayer } from "./player/player-ui.ts";
 import { startRouter, type Route } from "./router/router.ts";
 import { settings, updateSettings } from "./settings/settings.ts";
+import { cachedVisits, trackVisit } from "./visits/visitor-counter.ts";
 import { renderAbout, renderChapters, renderHome, renderNotFound, renderSourcesPage } from "./views/pages.ts";
 
 const app = document.querySelector<HTMLElement>("#app")!;
@@ -30,7 +31,16 @@ function render(route: Route): void {
   if (settings.language !== language) updateSettings({ language });
   document.documentElement.lang = language;
 
-  app.innerHTML = `${renderHeader(route)}<div id="view"></div>`;
+  // The listening screen stays free of everything but the chapter; other pages carry the footer.
+  const footer =
+    route.name === "chapter"
+      ? ""
+      : `<footer class="site-footer"><span>${t("brand", language)}</span><span class="visits">${t("visits", language)} <span class="visits__count" aria-live="polite">${cachedVisits().toLocaleString("en")}</span></span></footer>`;
+  app.innerHTML = `${renderHeader(route)}<div id="view"></div>${footer}`;
+  void trackVisit().then((total) => {
+    const count = app.querySelector(".visits__count");
+    if (count && total !== null) count.textContent = total.toLocaleString("en");
+  });
   const view = app.querySelector<HTMLElement>("#view")!;
   app.dataset.route = route.name;
   let title = "";
