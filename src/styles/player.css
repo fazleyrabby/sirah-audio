@@ -488,3 +488,20 @@
   color: var(--text-muted);
   font-size: 0.85rem;
 }
+
+/* In-text references under each transcript paragraph */
+
+.refs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+  margin: 2px 0 14px;
+}
+
+.refs span {
+  padding: 1px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}

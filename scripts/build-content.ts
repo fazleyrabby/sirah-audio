@@ -6,6 +6,7 @@ import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { createSpeaker, parseScript, toSegments } from "./lib/script.ts";
+import { sourceLabel } from "../src/i18n/strings.ts";
 import type {
   ChapterContent,
   ChapterIndex,
@@ -66,6 +67,7 @@ const chapters: ChapterMeta[] = list.chapters.map((entry, index) => {
     title: entry.title,
     description: entry.description ?? { en: "", bn: "" },
     duration: {},
+    text: {},
     audio: {},
     image: "/images/og-default.png",
     status: "coming-soon",
@@ -158,24 +160,36 @@ const chapters: ChapterMeta[] = list.chapters.map((entry, index) => {
     // Timings exist once the chapter has been narrated.
     const timingsFile = path.join(dir, `timings-${language}.json`);
     const audioFile = path.join(root, "public/audio", language, audioName);
-    if (!existsSync(timingsFile) || !existsSync(audioFile)) {
-      warnings.push(`${where}: ${language}: not narrated yet (run "npm run narrate")`);
-      continue;
+    // Without matching audio the chapter is still published as text to read (all times zero).
+    let timings: Timings | null = null;
+    if (existsSync(timingsFile) && existsSync(audioFile)) {
+      const candidate = readJson<Timings>(timingsFile);
+      const byId = new Map(candidate.segments.map((segment) => [segment.id, segment]));
+      const stale = items.length !== candidate.segments.length || items.some((item) => byId.get(item.id)?.hash !== item.hash);
+      if (!stale) timings = candidate;
+      else if (published) fail(`${language}: audio does not match the script (run "npm run narrate")`);
+      else warnings.push(`${where}: ${language}: audio does not match the script; shown as text only`);
     }
-    const timings = readJson<Timings>(timingsFile);
-    const timingById = new Map(timings.segments.map((segment) => [segment.id, segment]));
-    const stale = items.length !== timings.segments.length || items.some((item) => timingById.get(item.id)?.hash !== item.hash);
-    if (stale) {
-      const message = `${language}: audio does not match the script (run "npm run narrate")`;
-      if (published) fail(message);
-      else warnings.push(`${where}: ${message}`);
-      continue;
-    }
+    const narrated = timings !== null;
+    const duration = timings?.duration ?? 0;
+    const timingById = new Map((timings?.segments ?? []).map((segment) => [segment.id, segment]));
 
     const subtitles: SubtitleSegment[] = items.map((item) => {
-      const timing = timingById.get(item.id)!;
-      return { id: item.id, sceneId: item.sceneId, start: timing.start, end: timing.end, text: item.text };
+      const timing = timingById.get(item.id);
+      return { id: item.id, sceneId: item.sceneId, start: timing?.start ?? 0, end: timing?.end ?? 0, text: item.text, para: item.para };
     });
+    // In-text references: every paragraph ends with the sources its claims rest on.
+    let paragraphIndex = 0;
+    for (const scene of scenes) {
+      for (const paragraph of scene.paragraphs) {
+        const cited = sources.filter((source) =>
+          paragraph.claims.some((claimId) => claimById.get(claimId)?.sources.includes(source.id)),
+        );
+        const last = subtitles.findLast((subtitle) => subtitle.para === paragraphIndex);
+        if (last && cited.length > 0) last.refs = cited.map((source) => sourceLabel(source, language));
+        paragraphIndex++;
+      }
+    }
     const sceneList: Scene[] = scenes.map((scene, index) => {
       const first = subtitles.find((subtitle) => subtitle.sceneId === scene.id)!;
       const next = scenes[index + 1] && subtitles.find((subtitle) => subtitle.sceneId === scenes[index + 1].id)!;
@@ -183,7 +197,7 @@ const chapters: ChapterMeta[] = list.chapters.map((entry, index) => {
         id: scene.id,
         title: scene.title,
         start: index === 0 ? 0 : first.start,
-        end: next ? next.start : timings.duration,
+        end: next ? next.start : duration,
       };
     });
     const visuals: VisualCue[] = scenes.flatMap((scene) =>
@@ -212,6 +226,7 @@ const chapters: ChapterMeta[] = list.chapters.map((entry, index) => {
       chapterId: id,
       language,
       version: config.version,
+      narrated,
       verified: [...used].every((claimId) => claimById.get(claimId)?.status === "verified"),
       scenes: sceneList,
       subtitles,
@@ -219,8 +234,11 @@ const chapters: ChapterMeta[] = list.chapters.map((entry, index) => {
       sources: usedSources,
     };
     writeJson(path.join(publicContent, id, `${language}.json`), content);
-    meta.duration[language] = timings.duration;
-    meta.audio[language] = `/audio/${language}/${audioName}`;
+    meta.text[language] = true;
+    if (narrated) {
+      meta.duration[language] = duration;
+      meta.audio[language] = `/audio/${language}/${audioName}`;
+    }
   }
 
   // Both languages must tell the same story from the same claims.
@@ -232,7 +250,7 @@ const chapters: ChapterMeta[] = list.chapters.map((entry, index) => {
     for (const claimId of bn) if (!en.has(claimId)) fail(`claim ${claimId} is in bn but not en`);
   }
 
-  if (meta.audio.en || meta.audio.bn) meta.status = config.status;
+  if (meta.text.en || meta.text.bn) meta.status = config.status;
   return meta;
 });
 

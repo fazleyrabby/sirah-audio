@@ -1,4 +1,4 @@
-import { escapeHtml, t } from "../i18n/strings.ts";
+import { escapeHtml, sourceTitle, t } from "../i18n/strings.ts";
 import type { ChapterContent, Language } from "../types.ts";
 
 const ORDER = ["quran", "hadith", "seerah", "historical"];
@@ -16,7 +16,7 @@ export function renderSources(content: ChapterContent, language: Language): stri
       ].filter(Boolean);
       const note = source.note?.[language];
       return `<li class="source">
-        <span class="source__title">${escapeHtml(source.title)}</span>
+        <span class="source__title">${escapeHtml(sourceTitle(source.title, language))}</span>
         <span class="source__reference">${escapeHtml(source.reference)}</span>
         ${details.length ? `<span class="source__detail">${escapeHtml(details.join(" · "))}</span>` : ""}
         ${note ? `<span class="source__detail">${escapeHtml(note)}</span>` : ""}

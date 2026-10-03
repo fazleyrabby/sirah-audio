@@ -18,6 +18,10 @@ export function isPlayable(chapter: ChapterMeta, language: Language): boolean {
   return chapter.status !== "coming-soon" && Boolean(chapter.audio[language]);
 }
 
+export function isReadable(chapter: ChapterMeta, language: Language): boolean {
+  return chapter.status !== "coming-soon" && Boolean(chapter.text[language]);
+}
+
 // Neighbouring playable chapter in the given direction, skipping "coming soon" ones.
 export function neighbour(chapter: ChapterMeta, language: Language, direction: 1 | -1): ChapterMeta | undefined {
   for (let i = chapter.order - 1 + direction; i >= 0 && i < chapters.length; i += direction) {

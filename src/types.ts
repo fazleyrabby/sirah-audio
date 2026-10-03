@@ -19,6 +19,8 @@ export interface ChapterMeta {
   description: Record<Language, string>;
   duration: Partial<Record<Language, number>>;
   audio: Partial<Record<Language, string>>;
+  // Languages in which the chapter text exists (it may not be narrated yet).
+  text: Partial<Record<Language, boolean>>;
   image: string;
   status: ChapterStatus;
   version: number;
@@ -42,6 +44,9 @@ export interface SubtitleSegment {
   start: number;
   end: number;
   text: string;
+  para: number;
+  // Reference labels for the paragraph, carried by its last line (shown in the transcript).
+  refs?: string[];
 }
 
 export type VisualEffect = "ken-burns" | "slow-zoom" | "pan-left" | "pan-right" | "static";
@@ -81,6 +86,8 @@ export interface ChapterContent {
   version: number;
   // True only when every claim behind the narration has been verified by a human.
   verified: boolean;
+  // False when there is no audio yet: times are zero and the chapter is shown as text.
+  narrated: boolean;
   scenes: Scene[];
   subtitles: SubtitleSegment[];
   visuals: VisualCue[];

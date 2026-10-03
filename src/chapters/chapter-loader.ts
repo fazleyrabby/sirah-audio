@@ -8,6 +8,7 @@ function isValid(content: unknown): content is ChapterContent {
     Boolean(candidate) &&
     Array.isArray(candidate.scenes) &&
     candidate.scenes.length > 0 &&
+    typeof candidate.narrated === "boolean" &&
     Array.isArray(candidate.subtitles) &&
     candidate.subtitles.every((segment) => typeof segment.start === "number" && typeof segment.text === "string") &&
     Array.isArray(candidate.visuals) &&

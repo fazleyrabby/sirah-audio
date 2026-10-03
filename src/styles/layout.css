@@ -391,3 +391,30 @@ a.row:hover {
   font-size: 0.75rem;
   opacity: 0.7;
 }
+
+/* ---------- Reading view (chapter text without audio) ---------- */
+
+.reader h1 {
+  margin-top: 6px;
+}
+
+.reader .notice {
+  margin: 14px 0 6px;
+}
+
+.reader p.reader__text {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.reader p.reader__text:lang(bn) {
+  font-size: 1.12rem;
+  line-height: 1.9;
+}
+
+/* The header floats over the chapter route; leave room for it above the text. */
+[data-route="chapter"] .reader {
+  padding-top: 84px;
+}

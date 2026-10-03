@@ -17,6 +17,8 @@ const strings = {
   sources: { en: "Sources", bn: "সূত্র" },
   about: { en: "About", bn: "পরিচিতি" },
   chapter: { en: "Chapter", bn: "অধ্যায়" },
+  readOnly: { en: "Text", bn: "পাঠ" },
+  audioSoon: { en: "Narration for this chapter is not recorded yet. You can read it below.", bn: "এই অধ্যায়ের বর্ণনা এখনো রেকর্ড করা হয়নি। নিচে পড়তে পারেন।" },
   comingSoon: { en: "Coming soon", bn: "শীঘ্রই আসছে" },
   play: { en: "Play", bn: "চালান" },
   pause: { en: "Pause", bn: "থামান" },
@@ -72,6 +74,30 @@ export type StringKey = keyof typeof strings;
 
 export function t(key: StringKey, language: Language): string {
   return strings[key][language];
+}
+
+const SOURCE_TITLES: Record<string, string> = {
+  "Qur'an": "কুরআন",
+  "Sahih al-Bukhari": "সহিহ বুখারি",
+  "Sahih Muslim": "সহিহ মুসলিম",
+  "Sunan Abu Dawud": "সুনান আবু দাউদ",
+  "Jami' at-Tirmidhi": "জামে তিরমিজি",
+  "Sunan an-Nasa'i": "সুনান নাসায়ি",
+  "Sunan Ibn Majah": "সুনান ইবনে মাজাহ",
+  "Musnad Ahmad": "মুসনাদ আহমাদ",
+  "Ar-Raheeq Al-Makhtum (The Sealed Nectar)": "আর-রাহীকুল মাখতূম",
+};
+
+export function sourceTitle(title: string, language: Language): string {
+  return language === "bn" ? (SOURCE_TITLES[title] ?? title) : title;
+}
+
+// Short in-text reference such as "Qur'an 96:1-5" or "Sahih al-Bukhari 3".
+export function sourceLabel(source: { type: string; title: string; reference: string }, language: Language): string {
+  const title = sourceTitle(source.title, language).replace(/\s*\(.*\)$/, "");
+  const number =
+    source.type === "quran" ? /\d+:\d+(?:-\d+)?/.exec(source.reference)?.[0] : /hadith (\d+)/i.exec(source.reference)?.[1];
+  return number ? `${title} ${number}` : title;
 }
 
 export function formatTime(seconds: number): string {

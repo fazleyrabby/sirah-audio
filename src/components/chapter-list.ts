@@ -1,4 +1,4 @@
-import { chapters, isPlayable, parts } from "../chapters/chapters.ts";
+import { chapters, isPlayable, isReadable, parts } from "../chapters/chapters.ts";
 import { escapeHtml, formatMinutes, t } from "../i18n/strings.ts";
 import { href } from "../router/router.ts";
 import { settings } from "../settings/settings.ts";
@@ -14,6 +14,9 @@ export function renderChapterList(language: Language, currentId: string | null):
         .map((chapter) => {
           const title = escapeHtml(chapter.title[language]);
           const number = `<span class="row__number">${chapter.id}</span>`;
+          if (!isPlayable(chapter, language) && isReadable(chapter, language)) {
+            return `<li><a class="row" href="${href(`/chapter/${chapter.slug}`, language)}">${number}<span class="row__title">${title}</span><span class="row__meta">${t("readOnly", language)}</span></a></li>`;
+          }
           if (!isPlayable(chapter, language)) {
             return `<li><div class="row is-soon">${number}<span class="row__title">${title}</span><span class="row__meta">${t("comingSoon", language)}</span></div></li>`;
           }

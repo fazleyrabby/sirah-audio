@@ -59,8 +59,8 @@ describe("subtitle engine", () => {
     const seen: (string | null)[] = [];
     const engine = new SubtitleEngine(
       [
-        { id: "a", sceneId: "s01", start: 1, end: 3, text: "first" },
-        { id: "b", sceneId: "s01", start: 4, end: 6, text: "second" },
+        { id: "a", sceneId: "s01", start: 1, end: 3, text: "first", para: 0 },
+        { id: "b", sceneId: "s01", start: 4, end: 6, text: "second", para: 0 },
       ],
       (segment) => seen.push(segment?.text ?? null),
     );

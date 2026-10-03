@@ -67,7 +67,7 @@ for (const chapter of index.chapters) {
         const content = JSON.parse(readFileSync(file, "utf8")) as ChapterContent;
         transcript = content.scenes
           .map((scene) => {
-            const text = content.subtitles.filter((segment) => segment.sceneId === scene.id).map((segment) => escapeHtml(segment.text)).join(" ");
+            const text = content.subtitles.filter((segment) => segment.sceneId === scene.id).map((segment) => escapeHtml(segment.text) + (segment.refs ? ` <small>[${escapeHtml(segment.refs.join("; "))}]</small>` : "")).join(" ");
             return `<h2>${escapeHtml(scene.title)}</h2><p>${text}</p>`;
           })
           .join("");

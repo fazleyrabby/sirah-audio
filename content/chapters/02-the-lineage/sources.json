@@ -1,0 +1,11 @@
+[
+  { "id": "quran-2-127", "type": "quran", "title": "Qur'an", "reference": "Surah al-Baqarah 2:127" },
+  { "id": "quran-106-1-4", "type": "quran", "title": "Qur'an", "reference": "Surah Quraysh 106:1-4" },
+  { "id": "quran-33-40", "type": "quran", "title": "Qur'an", "reference": "Surah al-Ahzab 33:40" },
+  { "id": "bukhari-3364", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Prophets, hadith 3364", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3507", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Virtues, hadith 3507", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4315", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Military Expeditions, hadith 4315", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-7", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Beginning of Revelation, hadith 7", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "muslim-2276", "type": "hadith", "title": "Sahih Muslim", "reference": "Book of Virtues, hadith 2276", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Section on the lineage and family of the Prophet; pages to be confirmed against the reference edition" }
+]

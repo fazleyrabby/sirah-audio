@@ -8,7 +8,9 @@ export function renderTranscript(content: ChapterContent): string {
       const lines = content.subtitles
         .map((segment, index) => ({ segment, index }))
         .filter(({ segment }) => segment.sceneId === scene.id)
-        .map(({ segment, index }) => `<button type="button" class="line" data-line="${index}" data-seek="${segment.start}">${escapeHtml(segment.text)}</button>`)
+        .map(({ segment, index }) => `<button type="button" class="line" data-line="${index}" data-seek="${segment.start}">${escapeHtml(segment.text)}</button>${
+          segment.refs ? `<p class="refs">${segment.refs.map((ref) => `<span>${escapeHtml(ref)}</span>`).join("")}</p>` : ""
+        }`)
         .join("");
       return `<section class="transcript__scene"><h3><span>${formatTime(scene.start)}</span> ${escapeHtml(scene.title)}</h3>${lines}</section>`;
     })

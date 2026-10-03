@@ -1,7 +1,7 @@
 import { bindMediaSession } from "../audio/media-session.ts";
 import { player } from "../audio/player.ts";
 import { loadChapter } from "../chapters/chapter-loader.ts";
-import { isPlayable, neighbour, parts } from "../chapters/chapters.ts";
+import { isPlayable, isReadable, neighbour, parts } from "../chapters/chapters.ts";
 import { resolveVisuals, toPosition, toTime } from "../chapters/timeline.ts";
 import { renderChapterList } from "../components/chapter-list.ts";
 import { icons } from "../components/icons.ts";
@@ -16,6 +16,7 @@ import type { ChapterContent, ChapterMeta, Language } from "../types.ts";
 import { VisualEngine } from "../visuals/visual-engine.ts";
 import { bindControls } from "./controls.ts";
 import { bindProgress } from "./progress.ts";
+import { mountReader } from "../views/reader.ts";
 
 const SAVE_INTERVAL = 5000;
 const COMPLETE_WITHIN = 15;
@@ -43,8 +44,9 @@ export function mountPlayer(root: HTMLElement, chapter: ChapterMeta, route: Rout
   const other: Language = language === "en" ? "bn" : "en";
   const chaptersLink = `<a class="button button--quiet" href="${href("/chapters", language)}">${t("toChapters", language)}</a>`;
 
+  if (!isPlayable(chapter, language) && isReadable(chapter, language)) return mountReader(root, chapter, language);
   if (!isPlayable(chapter, language)) {
-    const body = isPlayable(chapter, other)
+    const body = isReadable(chapter, other)
       ? `<p>${t("notInLanguage", language)}</p><a class="button" href="${href(route.path, other)}" lang="${other}">${t("listenInOther", language)}</a>${chaptersLink}`
       : `<p>${t("chapterComingSoon", language)}</p>${chaptersLink}`;
     root.innerHTML = message(chapter, language, body);

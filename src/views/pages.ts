@@ -1,5 +1,5 @@
 // Home, chapter explorer, sources, about and not-found screens.
-import { chapterById, firstPlayable, isPlayable } from "../chapters/chapters.ts";
+import { chapterById, chapters, firstPlayable, isPlayable, isReadable } from "../chapters/chapters.ts";
 import { renderChapterList } from "../components/chapter-list.ts";
 import { escapeHtml, formatTime, t } from "../i18n/strings.ts";
 import { href } from "../router/router.ts";
@@ -9,7 +9,7 @@ import type { Language } from "../types.ts";
 export function renderHome(language: Language): string {
   const last = chapterById(settings.chapterId);
   const progress = last && settings.progress[last.id];
-  const first = firstPlayable(language);
+  const first = firstPlayable(language) ?? chapters.find((chapter) => isReadable(chapter, language));
   const resume = last && progress && isPlayable(last, language) && !progress.completed;
   const duration = last?.duration[language] ?? 0;
 
