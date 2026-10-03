@@ -1,0 +1,6 @@
+[
+  { "id": "quran-93-6-8", "type": "quran", "title": "Qur'an", "reference": "Surah ad-Duha 93:6 and 93:8" },
+  { "id": "muslim-162", "type": "hadith", "title": "Sahih Muslim", "reference": "Book of Faith, hadith 162", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "muslim-976", "type": "hadith", "title": "Sahih Muslim", "reference": "Book of Funerals, hadith 976", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Section on his childhood: Banu Sa'd, the death of his mother, his grandfather and Abu Talib; pages to be confirmed against the reference edition" }
+]

@@ -1,0 +1,7 @@
+[
+  { "id": "bukhari-2262", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Hiring, hadith 2262", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4770", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Commentary on the Qur'an, hadith 4770", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-7", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Beginning of Revelation, hadith 7", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "tirmidhi-3620", "type": "hadith", "title": "Jami' at-Tirmidhi", "reference": "Book of Virtues, hadith 3620; cited only as the source of a report that is not narrated", "numbering": "Ahmad Shakir", "note": { "en": "Graded munkar by al-Albani and Ahmad Shakir. The story is mentioned, not narrated.", "bn": "আলবানি ও আহমাদ শাকির একে মুনকার বলেছেন। ঘটনাটি শুধু উল্লেখ করা হয়েছে, বর্ণনা করা হয়নি।" } },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Sections on the journey to Syria, the Fijar war, Hilf al-Fudul and his early working life; pages to be confirmed against the reference edition" }
+]

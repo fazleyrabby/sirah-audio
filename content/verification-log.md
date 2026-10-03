@@ -38,3 +38,20 @@ fetched (HTTP 403).
 | Qur'an 2:127, 14:37, 33:40, 106:1-4 | Verse content checked against Arabic, Saheeh International and Muhiuddin Khan (Bengali) in the quran-api dataset |
 | Lineage chain of 21 names | **Not checked**; from memory of Ar-Raheeq and al-Bukhari's chapter heading |
 | Bengali scripts for chapters 01, 02, 03, 07 | Same scene ids and claim ids as English (enforced by the build). Wording awaits the Bengali reviewer |
+
+## 2026-10-03 -- chapters 04, 05, 06 (English and Bengali)
+
+| Source | Result |
+|--------|--------|
+| Sahih Muslim 162 (opening of the chest) | Content match in the dataset, including "I saw the marks of the needle on his breast". Abd al-Baqi number from memory |
+| Sahih Muslim 976 (visit to his mother's grave) | Content match. Number from memory. The part about seeking forgiveness is not narrated; flagged for the reviewer |
+| Sahih al-Bukhari 2262 | Match (every prophet tended sheep; he tended them for the people of Makkah for qirats) |
+| Sahih al-Bukhari 4770 | Match (Safa: "we have not found you telling anything other than the truth") |
+| Sahih al-Bukhari 7 | Match (Heraclius: had they accused him of lying before his claim; "No") |
+| Jami' at-Tirmidhi 3620 (Bahira) | Found. Graded munkar (al-Albani, Ahmad Shakir), da'if (Zubair Ali Zai). **Excluded from narration**; the script only says the story exists |
+| Sahih al-Bukhari 1582, 364 | Match (carrying stones for the Ka'bah, the waist-cloth) |
+| Sahih al-Bukhari 3815, 3818, 3820 | Match (best of women; Aishah on Khadijah, "from her I had children"; greeting from her Lord and the house in Paradise) |
+| Sahih al-Bukhari 4782, Qur'an 33:5 | Match (Zayd ibn Muhammad until the verse was revealed) |
+| Sahih Muslim 2436 (did not marry another while she lived) | Content match. Number from memory |
+| Qur'an 93:6-8 | Verse content checked |
+| Hilf al-Fudul saying, Black Stone arbitration | **Not checked**; narrated as Seerah reports. Graded references (Musnad Ahmad) to be added by the reviewer |

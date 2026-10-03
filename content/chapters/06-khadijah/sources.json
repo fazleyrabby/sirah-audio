@@ -1,0 +1,12 @@
+[
+  { "id": "quran-33-5", "type": "quran", "title": "Qur'an", "reference": "Surah al-Ahzab 33:5" },
+  { "id": "bukhari-3", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Beginning of Revelation, hadith 3", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-1582", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Hajj, hadith 1582", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-364", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Prayer, hadith 364", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3815", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3815", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3818", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3818", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-3820", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of the Merits of the Ansar, hadith 3820", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "bukhari-4782", "type": "hadith", "title": "Sahih al-Bukhari", "reference": "Book of Commentary on the Qur'an, hadith 4782", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "muslim-2436", "type": "hadith", "title": "Sahih Muslim", "reference": "Book of the Merits of the Companions, hadith 2436", "numbering": "Fu'ad Abd al-Baqi", "grade": "sahih" },
+  { "id": "raheeq", "type": "seerah", "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", "author": "Safiur-Rahman Al-Mubarakpuri", "reference": "Sections on his marriage to Khadijah and the rebuilding of the Ka'bah; pages to be confirmed against the reference edition" }
+]
