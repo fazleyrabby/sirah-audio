@@ -1,54 +1,40 @@
-"""Narrate all 37 chapters in English and Bengali using edge-tts (Azure neural voices).
-
-Voices:
-  - en: en-US-AndrewNeural (rate: -8%)
-  - bn: bn-BD-PradeepNeural (rate: -8%)
-
-Features:
-  - Concurrent segment fetching (Semaphore: 5) for fast throughput (~20-25s per chapter).
-  - Accurate segment timing directly from synthesized audio.
-  - Natural pauses (lead, line, paragraph, scene, tail).
-  - Loudness normalization to -16 LUFS via ffmpeg.
-  - Resumable: skips chapters whose audio and timings are already up to date.
-
-Usage:
-  /Users/rabbi/miniconda3/envs/kokoro/bin/python tools/edge_narrate_all.py --lang en
-  /Users/rabbi/miniconda3/envs/kokoro/bin/python tools/edge_narrate_all.py --lang bn
-  /Users/rabbi/miniconda3/envs/kokoro/bin/python tools/edge_narrate_all.py --all
-"""
-
 import argparse
 import asyncio
 import io
 import json
-from pathlib import Path
+import logging
+import os
+import pathlib
 import re
 import subprocess
 import time
-import edge_tts
+import sys
+
 import numpy as np
 import soundfile as sf
 
-ROOT = Path(__file__).resolve().parent.parent
-CACHE = ROOT / ".tools/edge_cache"
+from google.cloud import texttospeech
+from google.api_core.exceptions import ResourceExhausted
+
+ROOT = pathlib.Path(__file__).parent.parent
+CACHE = ROOT / ".tools/google_cache"
+
 GAPS = {
-    "lead": 0.8,
-    "line": 0.42,
-    "paragraph": 0.95,
-    "scene": 1.8,
+    "lead": 0.5,
+    "line": 0.3,
+    "paragraph": 0.8,
+    "scene": 1.2,
     "tail": 1.6,
 }
 VOICES = {
-    "en": "en-US-AndrewNeural",
-    "bn": "bn-BD-PradeepNeural",
+    "bn": "bn-IN-Wavenet-A",
 }
 HONORIFIC = {
-    "en": ", peace be upon him,",
     "bn": " সাল্লাল্লাহু আলাইহি ওয়া সাল্লাম",
 }
 
 
-def encode_mp3(wav_path: Path, mp3_path: Path) -> None:
+def encode_mp3(wav_path: pathlib.Path, mp3_path: pathlib.Path) -> None:
     """Two-pass loudness normalisation to -16 LUFS, then MP3."""
     target = "loudnorm=I=-16:TP=-1.5:LRA=11"
     probe = subprocess.run(
@@ -75,45 +61,69 @@ def encode_mp3(wav_path: Path, mp3_path: Path) -> None:
         check=True,
     )
 
+def synthesise_segment(client, text: str, voice_name: str, segment_hash: str) -> np.ndarray:
+    cache_file = CACHE / f"{segment_hash}_{voice_name}.wav"
+    if cache_file.exists():
+        data, sr = sf.read(cache_file, dtype="float32")
+        return data, sr
 
-async def synthesise_segment_with_retry(text: str, voice: str, rate: str, sem: asyncio.Semaphore, retries: int = 5) -> np.ndarray:
-    async with sem:
-        for attempt in range(retries):
-            try:
-                comm = edge_tts.Communicate(text=text, voice=voice, rate=rate)
-                buf = io.BytesIO()
-                async for chunk in comm.stream():
-                    if chunk["type"] == "audio":
-                        buf.write(chunk["data"])
-                buf.seek(0)
-                data, sr = sf.read(buf, dtype="float32")
-                if data.ndim > 1:
-                    data = data.mean(axis=1)
+    print(f"    Fetching {segment_hash} from Google TTS...")
+    synthesis_input = texttospeech.SynthesisInput(text=text)
+    
+    # Parse language code from voice name (e.g., bn-IN-Wavenet-A -> bn-IN)
+    lang_code = "-".join(voice_name.split("-")[:2])
+    
+    voice = texttospeech.VoiceSelectionParams(
+        language_code=lang_code,
+        name=voice_name
+    )
+    audio_config = texttospeech.AudioConfig(
+        audio_encoding=texttospeech.AudioEncoding.LINEAR16,
+        sample_rate_hertz=24000
+    )
+    
+    try:
+        response = client.synthesize_speech(
+            input=synthesis_input, voice=voice, audio_config=audio_config
+        )
+    except ResourceExhausted as e:
+        print(f"\n[!] Daily Quota Exceeded for Google Cloud TTS.")
+        print(f"Details: {e}")
+        print(f"Please wait and run again tomorrow to continue from where you left off.")
+        sys.exit(0)
+    except Exception as e:
+        print(f"\n[!] Error generating audio: {e}")
+        raise e
 
-                # Trim silence
-                threshold = 0.004
-                pad = int(0.03 * sr)
-                loud = np.flatnonzero(np.abs(data) > threshold)
-                if loud.size > 0:
-                    start = max(loud[0] - pad, 0)
-                    end = min(loud[-1] + pad, len(data))
-                    data = data[start:end]
+    buf = io.BytesIO(response.audio_content)
+    data, sr = sf.read(buf, dtype="float32")
+    
+    if data.ndim > 1:
+        data = data.mean(axis=1)
 
-                # De-click fades
-                fade = min(int(0.008 * sr), len(data) // 2)
-                if fade > 0:
-                    ramp = np.linspace(0.0, 1.0, fade, dtype=np.float32)
-                    data[:fade] *= ramp
-                    data[-fade:] *= ramp[::-1]
+    # Trim silence
+    threshold = 0.004
+    pad = int(0.03 * sr)
+    loud = np.flatnonzero(np.abs(data) > threshold)
+    if loud.size > 0:
+        start = max(loud[0] - pad, 0)
+        end = min(loud[-1] + pad, len(data))
+        data = data[start:end]
 
-                return data
-            except Exception as e:
-                if attempt == retries - 1:
-                    raise
-                await asyncio.sleep(1.5 * (attempt + 1))
+    # De-click fades
+    fade = min(int(0.008 * sr), len(data) // 2)
+    if fade > 0:
+        ramp = np.linspace(0.0, 1.0, fade, dtype=np.float32)
+        data[:fade] *= ramp
+        data[-fade:] *= ramp[::-1]
+
+    # Save to cache
+    sf.write(cache_file, data, sr)
+    
+    return data, sr
 
 
-async def narrate_chapter(ch_dir: Path, lang: str, rate: str, sem: asyncio.Semaphore, force: bool = False) -> bool:
+def narrate_chapter(client, ch_dir: pathlib.Path, lang: str, force: bool = False) -> bool:
     voice = VOICES[lang]
     tts_file = ch_dir / f"tts-{lang}.json"
     if not tts_file.exists():
@@ -139,21 +149,22 @@ async def narrate_chapter(ch_dir: Path, lang: str, rate: str, sem: asyncio.Semap
     t0 = time.time()
     print(f"\nNarrating {ch_dir.name} [{lang}] ({len(items)} segments)...")
 
-    # Prepare texts for each segment
-    texts = []
-    for item in items:
+    samples_list = []
+    sr = 24000
+    
+    for idx, item in enumerate(items):
         if lang == "bn":
-            # For Bengali, expand ﷺ if present
             t = item["text"].replace(" ﷺ", HONORIFIC["bn"]).replace("ﷺ", HONORIFIC["bn"])
         else:
             t = item.get("spoken") or item["text"]
-        texts.append(t)
+            
+        data, sample_rate = synthesise_segment(client, t, voice, item["hash"])
+        sr = sample_rate
+        samples_list.append(data)
+        
+        # Add small delay to avoid hitting rate limits (e.g. 300 per min)
+        time.sleep(0.2)
 
-    # Synthesise all segments concurrently
-    tasks = [synthesise_segment_with_retry(text, voice, rate, sem) for text in texts]
-    samples_list = await asyncio.gather(*tasks)
-
-    sr = 24000
     silence = lambda sec: np.zeros(int(sec * sr), dtype=np.float32)
 
     parts = [silence(GAPS["lead"])]
@@ -194,8 +205,7 @@ async def narrate_chapter(ch_dir: Path, lang: str, rate: str, sem: asyncio.Semap
 
     timings_data = {
         "voice": voice,
-        "speed": 0.92,
-        "rate": rate,
+        "speed": 1.0,
         "duration": round(cursor, 3),
         "segments": segments,
     }
@@ -204,52 +214,43 @@ async def narrate_chapter(ch_dir: Path, lang: str, rate: str, sem: asyncio.Semap
     print(f"  ✓ {ch_dir.name} [{lang}]: {cursor:.1f}s audio in {elapsed:.1f}s -> {audio_path.name}")
     return True
 
-
-
-async def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--lang", choices=("en", "bn"))
-    parser.add_argument("--all", action="store_true")
+def main():
+    parser = argparse.ArgumentParser(description="Generate BN audio via Google Cloud TTS with segment caching.")
     parser.add_argument("--chapters", nargs="*", help="Optional list of chapter numbers, e.g. 01 02")
-    parser.add_argument("--rate", default="-8%")
-    parser.add_argument("--concurrency", type=int, default=12)
+    parser.add_argument("--voice", help="Override default voice", default="bn-IN-Wavenet-A")
     parser.add_argument("--force", action="store_true")
     args = parser.parse_args()
 
-    if args.all:
-        langs = ["en", "bn"]
-    elif args.lang:
-        langs = [args.lang]
-    else:
-        parser.error("Specify --lang [en|bn] or --all")
+    VOICES["bn"] = args.voice
+
+    try:
+        client = texttospeech.TextToSpeechClient()
+    except Exception as e:
+        print(f"Failed to initialize Google TTS client: {e}")
+        print("Please ensure GOOGLE_APPLICATION_CREDENTIALS is set.")
+        sys.exit(1)
 
     CACHE.mkdir(parents=True, exist_ok=True)
-    sem = asyncio.Semaphore(args.concurrency)
-    ch_sem = asyncio.Semaphore(3)
-
+    lang = "bn"
+    
     all_dirs = sorted((ROOT / "content/chapters").glob("[0-9][0-9]-*"))
     if args.chapters:
         target_ids = {c.zfill(2) for c in args.chapters}
         all_dirs = [d for d in all_dirs if d.name[:2] in target_ids]
 
-    for lang in langs:
-        print(f"\n=======================================================")
-        print(f"Starting narration for {lang.upper()} ({len(all_dirs)} chapters)")
-        print(f"Voice: {VOICES[lang]} | Rate: {args.rate} | Concurrency: {args.concurrency}")
-        print(f"=======================================================")
+    print(f"\n=======================================================")
+    print(f"Starting narration for {lang.upper()} ({len(all_dirs)} chapters)")
+    print(f"Voice: {VOICES[lang]}")
+    print(f"=======================================================")
 
-        async def run_one(idx, ch_dir):
-            async with ch_sem:
-                print(f"[{idx + 1}/{len(all_dirs)}] Checking {ch_dir.name}...")
-                await narrate_chapter(ch_dir, lang, args.rate, sem, force=args.force)
-
-        await asyncio.gather(*[run_one(i, d) for i, d in enumerate(all_dirs)])
+    for i, ch_dir in enumerate(all_dirs):
+        print(f"[{i + 1}/{len(all_dirs)}] Checking {ch_dir.name}...")
+        narrate_chapter(client, ch_dir, lang, force=args.force)
 
     # Rebuild content so all generated chapters become playable
     print("\nRebuilding content ledger (npm run content)...")
     subprocess.run(["node", "scripts/build-content.ts"], cwd=str(ROOT), check=True)
     print("\nAll chapters successfully built and synchronized!")
 
-
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()
