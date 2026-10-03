@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="100%" height="100%">
+  <defs>
+    <!-- Sky gradient: Deep twilight into early amber dawn -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0c1324" />
+      <stop offset="45%" stop-color="#18233c" />
+      <stop offset="70%" stop-color="#3d354b" />
+      <stop offset="88%" stop-color="#7a4e4b" />
+      <stop offset="100%" stop-color="#b87352" />
+    </linearGradient>
+
+    <!-- Distant atmospheric ridge gradient -->
+    <linearGradient id="ridgeFarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a2336" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#54373e" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Mid mountain ridge gradient -->
+    <linearGradient id="ridgeMidGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a1c2b" />
+      <stop offset="100%" stop-color="#2e222a" />
+    </linearGradient>
+
+    <!-- Foreground Mount Hira rugged silhouette -->
+    <linearGradient id="hiraGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f111a" />
+      <stop offset="100%" stop-color="#16151c" />
+    </linearGradient>
+
+    <!-- Soft horizon glow -->
+    <radialGradient id="dawnGlow" cx="45%" cy="85%" r="60%">
+      <stop offset="0%" stop-color="#e89868" stop-opacity="0.45" />
+      <stop offset="50%" stop-color="#a35b4c" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#0c1324" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1600" height="900" fill="url(#skyGrad)" />
+  <rect width="1600" height="900" fill="url(#dawnGlow)" />
+
+  <!-- Subtle distant stars in upper sky -->
+  <g fill="#ffffff" opacity="0.65">
+    <circle cx="210" cy="110" r="1.2" opacity="0.5" />
+    <circle cx="340" cy="70" r="1.5" opacity="0.7" />
+    <circle cx="520" cy="140" r="1.0" opacity="0.4" />
+    <circle cx="780" cy="85" r="1.6" opacity="0.8" />
+    <circle cx="950" cy="60" r="1.2" opacity="0.5" />
+    <circle cx="1180" cy="125" r="1.4" opacity="0.6" />
+    <circle cx="1390" cy="90" r="1.1" opacity="0.5" />
+    <circle cx="1480" cy="160" r="1.3" opacity="0.6" />
+    <circle cx="160" cy="220" r="1.0" opacity="0.4" />
+    <circle cx="430" cy="190" r="1.2" opacity="0.5" />
+    <circle cx="890" cy="170" r="1.0" opacity="0.4" />
+    <circle cx="1270" cy="210" r="1.2" opacity="0.5" />
+  </g>
+
+  <!-- Distant mountain ridges -->
+  <path d="M0,640 Q180,610 380,630 T820,590 Q1100,560 1350,610 T1600,600 L1600,900 L0,900 Z" fill="url(#ridgeFarGrad)" />
+
+  <!-- Mid-distance layered mountain passes -->
+  <path d="M0,680 Q240,640 520,670 T1040,630 Q1300,610 1600,660 L1600,900 L0,900 Z" fill="url(#ridgeMidGrad)" />
+
+  <!-- Mount Hira rugged peak and valley floor -->
+  <path d="M0,900 L0,740 L180,720 L320,680 L440,610 L520,530 L560,510 L610,480 L640,490 L710,560 L830,650 L980,710 L1180,750 L1420,770 L1600,790 L1600,900 Z" fill="url(#hiraGrad)" />
+
+  <!-- Subtle rock texture highlights caught in first light -->
+  <path d="M520,530 L560,510 L610,480 L625,485 L590,520 L540,560 Z" fill="#d97d52" opacity="0.12" />
+  <path d="M440,610 L520,530 L500,580 L420,650 Z" fill="#c46a47" opacity="0.08" />
+
+  <!-- Ground plane silhouette -->
+  <path d="M0,820 Q400,810 800,830 T1600,820 L1600,900 L0,900 Z" fill="#090a0f" />
+</svg>

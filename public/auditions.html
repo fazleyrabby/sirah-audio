@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voice & Pronunciation Auditions — Sīrah ﷺ</title>
+  <style>
+    body {
+      background-color: #0b0e14;
+      color: #e6e8ec;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 2.5rem 1.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #f3efe6;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #dfb274;
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+      border-bottom: 1px solid #232a3b;
+      padding-bottom: 0.5rem;
+      font-weight: 500;
+    }
+    h3 {
+      font-size: 1.05rem;
+      color: #c99351;
+      margin: 1.25rem 0 0.5rem 0;
+      font-weight: 600;
+    }
+    p.subtitle {
+      color: #9da3af;
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+    .card {
+      background: #141824;
+      border: 1px solid #232a3b;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .card-highlight {
+      border: 1px solid #c99351;
+      background: #171c2b;
+    }
+    .voice-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #dfb274;
+      margin-bottom: 0.25rem;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      background: #2a344d;
+      color: #8bb2ff;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+      font-weight: normal;
+    }
+    .badge-green {
+      background: #1d3b2b;
+      color: #5de39a;
+    }
+    .badge-gold {
+      background: #3b2e18;
+      color: #f7d08b;
+    }
+    .voice-desc {
+      font-size: 0.85rem;
+      color: #8b92a1;
+      margin-bottom: 0.85rem;
+    }
+    .transcript {
+      font-size: 0.95rem;
+      color: #d1d5db;
+      background: #0d1017;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      margin-bottom: 0.85rem;
+      line-height: 1.7;
+      border-left: 3px solid #c99351;
+    }
+    audio {
+      width: 100%;
+      outline: none;
+      border-radius: 30px;
+      margin-top: 0.35rem;
+    }
+    .variants-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.75rem;
+      margin-top: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+    .variant-card {
+      background: #0d1017;
+      border: 1px solid #232a3b;
+      border-radius: 8px;
+      padding: 0.75rem;
+      transition: border-color 0.2s;
+    }
+    .variant-card:hover {
+      border-color: #c99351;
+    }
+    .variant-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #f3efe6;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.35rem;
+    }
+    .variant-phonetic {
+      font-family: monospace;
+      font-size: 0.8rem;
+      color: #8bb2ff;
+      background: #192233;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+    }
+    .variant-phrase {
+      font-size: 0.8rem;
+      color: #9da3af;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Voice & Pronunciation Auditions — Sīrah ﷺ</h1>
+  <p class="subtitle">Audition and fine-tune Arabic name pronunciations for English narration, and monitor Bengali completion:</p>
+
+  <h2>1. Arabic Name Pronunciation Tuner (English Narration)</h2>
+  <p style="color: #abb2bf; font-size: 0.9rem; margin-bottom: 1rem;">
+    Compare how Azure's Andrew voice renders each Arabic name under different phonetic spellings versus the raw default. Listen to pick the most natural and authentic pronunciation:
+  </p>
+
+  <!-- Full Context Comparison -->
+  <div class="card card-highlight">
+    <div class="voice-name">Full Passage Comparison: Raw Live vs. Tuned Phonetics <span class="badge badge-gold">Key Review</span></div>
+    <div class="voice-desc">Hear how the entire flow of names sounds inside a continuous narration sentence:</div>
+    
+    <div style="margin-bottom: 1rem;">
+      <div style="font-weight: 600; font-size: 0.85rem; color: #e5c07b; margin-bottom: 0.25rem;">Option A: Current Live Audio (Raw English Spellings)</div>
+      <div class="transcript">"In the name of Allah. Muhammad, peace be upon him, was in the cave of Hira near Makkah. Khadijah went to Waraqah ibn Nawfal, who said this was the Namus sent to Musa. Later, Abu Bakr and Aishah preserved these memories."</div>
+      <audio controls src="/auditions/pronunciation/full-context-current.mp3"></audio>
+    </div>
+
+    <div>
+      <div style="font-weight: 600; font-size: 0.85rem; color: #5de39a; margin-bottom: 0.25rem;">Option B: Phonetically Tuned Audio (Ahl-lah, Mohummad, Mahkkah, Khadeeja, Waraka, Moosa, Aboo Buk-r, Eye-shah)</div>
+      <div class="transcript">"In the name of Ahl-lah. Mohummad, peace be upon him, was in the cave of Heera near Mahkkah. Khadeeja went to Waraka ib-en Nowfal, who said this was the Naamoos sent to Moosa. Later, Aboo Buk-r and Eye-shah preserved these memories."</div>
+      <audio controls src="/auditions/pronunciation/full-context-tuned.mp3"></audio>
+    </div>
+  </div>
+
+  <!-- Individual Name Breakdown -->
+  <h3>1. Allah (341 occurrences)</h3>
+  <div class="variants-grid">
+    <div class="variant-card">
+      <div class="variant-title">Default <span class="variant-phonetic">"Allah"</span></div>
+      <div class="variant-phrase">In the name of Allah...</div>
+      <audio controls src="/auditions/pronunciation/allah-default.mp3"></audio>
+    </div>
+    <div class="variant-card">
+      <div class="variant-title">Tuned 1 <span class="variant-phonetic">"Ahl-lah"</span></div>
+      <div class="variant-phrase">In the name of Ahl-lah...</div>
+      <audio controls src="/auditions/pronunciation/allah-ahl-lah.mp3"></audio>
+    </div>
+    <div class="variant-card">
+      <div class="variant-title">Tuned 2 <span class="variant-phonetic">"Uhl-lah"</span></div>
+      <div class="variant-phrase">In the name of Uhl-lah...</div>
+      <audio controls src="/auditions/pronunciation/allah-uhl-lah.mp3"></audio>
+    </div>
+    <div class="variant-card">
+      <div class="variant-title">Tuned 3 <span class="variant-phonetic">"Al-laah"</span></div>
+      <div class="variant-phrase">In the name of Al-laah...</div>
+      <audio controls src="/auditions/pronunciation/allah-al-laah.mp3"></audio>
+    </div>
+    <div class="variant-card">
+      <div class="variant-title">Tuned 4 <span class="variant-phonetic">"Ullaah"</span></div>
+      <div class="variant-phrase">In the name of Ullaah...</div>
+      <audio controls src="/auditions/pronunciation/allah-ullaah.mp3"></audio>
+    </div>
+  </div>
+
+  <h3>2. Muhammad ﷺ (31 occurrences)</h3>
+  <div class="variants-grid">
+    <div class="variant-card">
+      <div class="variant-title">Default <span class="variant-phonetic">"Muhammad"</span></div>
+      <div class="variant-phrase">The Prophet Muhammad...</div>
+      <audio controls src="/auditions/pronunciation/muhammad-default.mp3"></audio>
+    </div>
+    <div class="variant-card">
+      <div class="variant-title">Tuned 1 <span class="variant-phonetic">"Mohummad"</span></div>
+      <div class="variant-phrase">The Prophet Mohummad...</div>
+      <audio controls src="/auditions/pronunciation/muhammad-mohummad.mp3"></audio>
+    </div>
+    <div class="variant-card">
+      <div class="variant-title">Tuned 2 <span class="variant-phonetic">"Muhummed"</span></div>
+      <div class="variant-phrase">The Prophet Muhummed...</div>
+      <audio controls src="/auditions/pronunciation/muhammad-muhummed.mp3"></audio>
+    </div>
+    <div class="variant-card">
+      <div class="variant-title">Tuned 3 <span class="variant-phonetic">"Mohammed"</span></div>
+      <div class="variant-phrase">The Prophet Mohammed...</div>
+      <audio controls src="/auditions/pronunciation/muhammad-mohammed.mp3"></audio>
+    </div>
+  </div>
+
+  <h3>3. Qur'an (62 occurrences)</h3>
+  <div class="variants-grid">
+    <div class="variant-card">
+      <div class="variant-title">Default <span class="variant-phonetic">"Qur'an"</span></div>
+      <div class="variant-phrase">The words of the Qur'an...</div>
+      <audio controls src="/auditions/pronunciation/quran-default.mp3"></audio>
+    </div>
+    <div class="variant-card">
+      <div class="variant-title">Tuned 1 <span class="variant-phonetic">"Koor-aan"</span></div>
+      <div class="variant-phrase">The words of the Koor-aan...</div>
+      <audio controls src="/auditions/pronunciation/quran-koor-aan.mp3"></audio>
+    </div>
+    <div class="variant-card">
+      <div class="variant-title">Tuned 2 <span class="variant-phonetic">"Qor-aan"</span></div>
+      <div class="variant-phrase">The words of the Qor-aan...</div>
+      <audio controls src="/auditions/pronunciation/quran-qor-aan.mp3"></audio>
+    </div>
+    <div class="variant-card">
+      <div class="variant-title">Tuned 3 <span class="variant-phonetic">"Kur-aan"</span></div>
+      <div class="variant-phrase">The words of the Kur-aan...</div>
+      <audio controls src="/auditions/pronunciation/quran-kur-aan.mp3"></audio>
+    </div>
+  </div>
+
+  <h3>4. Abu Bakr (66 occurrences)</h3>
+  <div class="variants-grid">
+    <div class="variant-card">
+      <div class="variant-title">Default <span class="variant-phonetic">"Abu Bakr"</span></div>
+      <div class="variant-phrase">Abu Bakr was his companion...</div>
+      <audio controls src="/auditions/pronunciation/abu-bakr-default.mp3"></audio>
+    </div>
+    <div class="variant-card">
+      <div class="variant-title">Tuned 1 <span class="variant-phonetic">"Aboo Buk-r"</span></div>
+      <div class="variant-phrase">Aboo Buk-r was his companion...</div>
+      <audio controls src="/auditions/pronunciation/abu-bakr-aboo-buk-r.mp3"></audio>
+    </div>
+    <div class="variant-card">
+      <div class="variant-title">Tuned 2 <span class="variant-phonetic">"Aboo Bak-r"</span></div>
+      <div class="variant-phrase">Aboo Bak-r was his companion...</div>
+      <audio controls src="/auditions/pronunciation/abu-bakr-aboo-bak-r.mp3"></audio>
+    </div>
+  </div>
+
+  <h3>5. Aishah (27 occurrences)</h3>
+  <div class="variants-grid">
+    <div class="variant-card">
+      <div class="variant-title">Default <span class="variant-phonetic">"Aishah"</span></div>
+      <div class="variant-phrase">Aishah narrated the event...</div>
+      <audio controls src="/auditions/pronunciation/aishah-default.mp3"></audio>
+    </div>
+    <div class="variant-card">
+      <div class="variant-title">Tuned 1 <span class="variant-phonetic">"Eye-shah"</span></div>
+      <div class="variant-phrase">Eye-shah narrated the event...</div>
+      <audio controls src="/auditions/pronunciation/aishah-eye-shah.mp3"></audio>
+    </div>
+    <div class="variant-card">
+      <div class="variant-title">Tuned 2 <span class="variant-phonetic">"Aa-isha"</span></div>
+      <div class="variant-phrase">Aa-isha narrated the event...</div>
+      <audio controls src="/auditions/pronunciation/aishah-aa-isha.mp3"></audio>
+    </div>
+    <div class="variant-card">
+      <div class="variant-title">Tuned 3 <span class="variant-phonetic">"Aye-shah"</span></div>
+      <div class="variant-phrase">Aye-shah narrated the event...</div>
+      <audio controls src="/auditions/pronunciation/aishah-ay-shah.mp3"></audio>
+    </div>
+  </div>
+
+  <h3>6. Makkah, Khadijah & Musa</h3>
+  <div class="variants-grid">
+    <div class="variant-card">
+      <div class="variant-title">Makkah (Default) <span class="variant-phonetic">"Makkah"</span></div>
+      <audio controls src="/auditions/pronunciation/makkah-default.mp3"></audio>
+    </div>
+    <div class="variant-card">
+      <div class="variant-title">Makkah (Tuned) <span class="variant-phonetic">"Mahkkah"</span></div>
+      <audio controls src="/auditions/pronunciation/makkah-mahkkah.mp3"></audio>
+    </div>
+    <div class="variant-card">
+      <div class="variant-title">Khadijah (Default) <span class="variant-phonetic">"Khadijah"</span></div>
+      <audio controls src="/auditions/pronunciation/khadijah-default.mp3"></audio>
+    </div>
+    <div class="variant-card">
+      <div class="variant-title">Khadijah (Tuned) <span class="variant-phonetic">"Khadeeja"</span></div>
+      <audio controls src="/auditions/pronunciation/khadijah-khadeeja.mp3"></audio>
+    </div>
+    <div class="variant-card">
+      <div class="variant-title">Musa (Default) <span class="variant-phonetic">"Musa"</span></div>
+      <audio controls src="/auditions/pronunciation/musa-default.mp3"></audio>
+    </div>
+    <div class="variant-card">
+      <div class="variant-title">Musa (Tuned) <span class="variant-phonetic">"Moosa"</span></div>
+      <audio controls src="/auditions/pronunciation/musa-moosa.mp3"></audio>
+    </div>
+  </div>
+
+  <h2>2. Bengali Full Narration Progress (Pradeep)</h2>
+
+  <div class="card">
+    <div class="voice-name">Pradeep Neural (bn-BD-PradeepNeural) <span class="badge badge-green">Narrating All 37 Chapters</span></div>
+    <div class="voice-desc">Calm, clear standard Bangladeshi neural voice (-8% rate, -16 LUFS normalized).</div>
+    <div class="transcript">
+      "আল্লাহর রাসুল সাল্লাল্লাহু আলাইহি ওয়া সাল্লাম চল্লিশ বছর বয়সে পৌঁছালেন। রমজান মাসে, মক্কার নূর পর্বতের হেরা গুহায়..."
+    </div>
+    <audio controls src="/auditions/edge-bn-pradeep-context.mp3"></audio>
+  </div>
+
+  <h2>3. Reference Voices</h2>
+
+  <div class="card">
+    <div class="voice-name">Google Gemini English (Storyteller-9) <span class="badge">Google Gemini</span></div>
+    <div class="voice-desc">Natural documentary tone, but has a 10 requests/day quota limit on the free tier.</div>
+    <audio controls src="/auditions/gemini-en-pronunciation-context.mp3"></audio>
+  </div>
+
+  <div class="card">
+    <div class="voice-name">Google Gemini Bengali (Storyteller) <span class="badge">Google Gemini</span></div>
+    <div class="voice-desc">Google Gemini Bengali narration (10 requests/day quota limit on free tier).</div>
+    <audio controls src="/auditions/gemini-bn-pronunciation-context.mp3"></audio>
+  </div>
+</body>
+</html>
