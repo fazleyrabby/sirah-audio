@@ -62,12 +62,15 @@ def build_respell():
     config = json.loads((ROOT / "content/respell-bn.json").read_text("utf-8"))
     letter_map = config.get("letter_map", {})
     phrases = config.get("phrases", [])
+    word_map = config.get("word_map", {})
     inventory = json.loads((ROOT / "content/pronunciation-bn.json").read_text("utf-8"))
     stems = set(config.get("extra_stems", []))
     for entry in inventory.values():
         stems.update(entry.get("bn", []))
     stems = sorted(stems, key=len, reverse=True)
     patterns = [(stem, re.compile(rf"(?<![\u0980-\u09FF]){re.escape(stem)}")) for stem in stems]
+    word_patterns = [(re.compile(rf"(?<![\u0980-\u09FF]){re.escape(src)}(?![\u0980-\u09FF])"), dst)
+                     for src, dst in sorted(word_map.items(), key=lambda x: len(x[0]), reverse=True)]
 
     def transform(text: str) -> str:
         for src, dst in letter_map.items():
@@ -75,6 +78,8 @@ def build_respell():
         return text
 
     def respell(text: str) -> str:
+        for pattern, replacement in word_patterns:
+            text = pattern.sub(replacement, text)
         for phrase in phrases:
             if phrase in text:
                 text = text.replace(phrase, transform(phrase))
