@@ -243,7 +243,7 @@ def main() -> None:
         if args.chapters and directory.name[:2] not in args.chapters:
             continue
         found = True
-        narrate_chapter(model, directory, config, ref_wav, ref_text, args.steps, args.cfg, key, args.force, args.limit, respell, args.lowpass)
+        narrate_chapter(model, directory, config, ref_wav, ref_text, args.steps, args.cfg, key, args.force, args.limit, build_respell(), args.lowpass)
     if not found:
         raise SystemExit("no chapters to narrate")
 
