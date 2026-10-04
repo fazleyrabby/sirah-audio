@@ -38,14 +38,15 @@ def to_wav(src: pathlib.Path, dst: pathlib.Path, sample_rate: int = 24000) -> pa
     return dst
 
 
-def write_audio(path: pathlib.Path, audio: np.ndarray, sample_rate: int) -> None:
+def write_audio(path: pathlib.Path, audio: np.ndarray, sample_rate: int, tempo: float = 1.0) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     wav = path.with_suffix(".wav")
     sf.write(str(wav), audio.astype(np.float32), sample_rate)
     if path.suffix.lower() == ".mp3":
+        af = f"atempo={tempo},loudnorm=I=-16:TP=-1.5:LRA=11" if tempo != 1.0 else "loudnorm=I=-16:TP=-1.5:LRA=11"
         subprocess.run(
             ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(wav),
-             "-af", "loudnorm=I=-16:TP=-1.5:LRA=11", "-ar", "44100", "-ac", "1",
+             "-af", af, "-ar", "44100", "-ac", "1",
              "-codec:a", "libmp3lame", "-b:a", "128k", str(path)],
             check=True,
         )
@@ -71,6 +72,7 @@ def main() -> None:
     parser.add_argument("--temperature", type=float, default=0.9)
     parser.add_argument("--top-k", type=int, default=50)
     parser.add_argument("--repetition-penalty", type=float, default=1.05)
+    parser.add_argument("--tempo", type=float, default=0.90, help="playback tempo scaling (e.g. 0.90 for unhurried pace)")
     parser.add_argument("--verbose", action="store_true")
     args = parser.parse_args()
 
@@ -85,7 +87,7 @@ def main() -> None:
     print(f"Loaded in {time.time() - started:.1f}s (sample rate {model.sample_rate})", flush=True)
 
     mode = "ICL" if ref_text else "x-vector"
-    print(f"Synthesising [{args.lang}, {mode}] -> {args.out}", flush=True)
+    print(f"Synthesising [{args.lang}, {mode}, tempo {args.tempo}] -> {args.out}", flush=True)
     started = time.time()
     results = model.generate(
         text=args.text,
@@ -101,7 +103,7 @@ def main() -> None:
     audio = np.concatenate(chunks) if chunks else np.zeros(0, dtype=np.float32)
     duration = len(audio) / model.sample_rate
 
-    write_audio(args.out, audio, model.sample_rate)
+    write_audio(args.out, audio, model.sample_rate, tempo=args.tempo)
     print(json.dumps({
         "out": str(args.out),
         "mode": mode,
