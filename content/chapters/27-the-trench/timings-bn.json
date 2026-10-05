@@ -1,416 +1,419 @@
 {
- "voice": "bn-BD-PradeepNeural",
- "speed": 0.92,
- "rate": "-8%",
- "duration": 283.27,
+ "voice": "indicf5-mlx",
+ "ref": "gemini-bn-storyteller.wav",
+ "ref_text": "মক্কা উপত্যকার ওপরে দাঁড়িয়ে আছে রুক্ষ, কালো পাথরের এক পাহাড়। তার চূড়ার কাছে, শহর থেকে অনেক উঁচুতে, আছে ছোট্ট একটি গুহা। গুহাটির নাম হেরা।",
+ "steps": 8,
+ "cfg": 2.0,
+ "settings_key": "dec2b8683c173e5b",
+ "duration": 428.58,
  "segments": [
   {
    "id": "seg-001",
    "hash": "b8761bce74de",
    "start": 0.8,
-   "end": 3.407
+   "end": 5.136
   },
   {
    "id": "seg-002",
    "hash": "178fea2185f7",
-   "start": 3.827,
-   "end": 5.213
+   "start": 5.556,
+   "end": 7.801
   },
   {
    "id": "seg-003",
    "hash": "8232bf44f99e",
-   "start": 6.163,
-   "end": 14.353
+   "start": 8.751,
+   "end": 22.485
   },
   {
    "id": "seg-004",
    "hash": "d5eb4d6d0098",
-   "start": 14.773,
-   "end": 16.614
+   "start": 22.905,
+   "end": 25.641
   },
   {
    "id": "seg-005",
    "hash": "ac2f5b8c0b2e",
-   "start": 17.034,
-   "end": 19.809
+   "start": 26.061,
+   "end": 30.397
   },
   {
    "id": "seg-006",
    "hash": "2ade35fb6c55",
-   "start": 20.759,
-   "end": 24.752
+   "start": 31.347,
+   "end": 38.2
   },
   {
    "id": "seg-007",
    "hash": "d95b7e8820e5",
-   "start": 25.172,
-   "end": 32.67
+   "start": 38.62,
+   "end": 50.455
   },
   {
    "id": "seg-008",
    "hash": "962f7b325e9b",
-   "start": 33.09,
-   "end": 35.929
+   "start": 50.875,
+   "end": 55.499
   },
   {
    "id": "seg-009",
    "hash": "96d6ed010a6f",
-   "start": 37.729,
-   "end": 39.215
+   "start": 57.299,
+   "end": 60.28
   },
   {
    "id": "seg-010",
    "hash": "2a277f94477e",
-   "start": 40.165,
-   "end": 45.564
+   "start": 61.23,
+   "end": 69.769
   },
   {
    "id": "seg-011",
    "hash": "1ade529b7cac",
-   "start": 45.984,
-   "end": 48.744
+   "start": 70.189,
+   "end": 75.271
   },
   {
    "id": "seg-012",
    "hash": "172eb4ebb6fb",
-   "start": 49.164,
-   "end": 51.445
+   "start": 75.691,
+   "end": 79.334
   },
   {
    "id": "seg-013",
    "hash": "d23acc67c3e2",
-   "start": 51.865,
-   "end": 54.787
+   "start": 79.754,
+   "end": 84.591
   },
   {
    "id": "seg-014",
    "hash": "bca5d0389f50",
-   "start": 55.207,
-   "end": 58.275
+   "start": 85.011,
+   "end": 89.347
   },
   {
    "id": "seg-015",
    "hash": "52d16e38a5c1",
-   "start": 59.225,
-   "end": 63.28
+   "start": 90.297,
+   "end": 97.684
   },
   {
    "id": "seg-016",
    "hash": "026547f38923",
-   "start": 63.7,
-   "end": 66.869
+   "start": 98.104,
+   "end": 103.56
   },
   {
    "id": "seg-017",
    "hash": "6a4b472cab38",
-   "start": 67.289,
-   "end": 69.779
+   "start": 103.98,
+   "end": 107.953
   },
   {
    "id": "seg-018",
    "hash": "777b5660bfbb",
-   "start": 70.729,
-   "end": 72.698
+   "start": 108.903,
+   "end": 112.674
   },
   {
    "id": "seg-019",
    "hash": "ed1f613093a8",
-   "start": 73.118,
-   "end": 78.441
+   "start": 113.094,
+   "end": 122.219
   },
   {
    "id": "seg-020",
    "hash": "44abc500f598",
-   "start": 78.861,
-   "end": 82.958
+   "start": 122.639,
+   "end": 130.069
   },
   {
    "id": "seg-021",
    "hash": "61a5db3e3764",
-   "start": 83.378,
-   "end": 86.69
+   "start": 130.489,
+   "end": 136.233
   },
   {
    "id": "seg-022",
    "hash": "d81c9af3a647",
-   "start": 87.11,
-   "end": 89.472
+   "start": 136.653,
+   "end": 140.253
   },
   {
    "id": "seg-023",
    "hash": "d0bd5ab796c5",
-   "start": 89.892,
-   "end": 92.02
+   "start": 140.673,
+   "end": 144.518
   },
   {
    "id": "seg-024",
    "hash": "4aa7a6f99ba3",
-   "start": 92.44,
-   "end": 95.386
+   "start": 144.938,
+   "end": 149.861
   },
   {
    "id": "seg-025",
    "hash": "def3852d695d",
-   "start": 97.186,
-   "end": 98.528
+   "start": 151.661,
+   "end": 153.661
   },
   {
    "id": "seg-026",
    "hash": "0e55512a5a94",
-   "start": 99.478,
-   "end": 104.669
+   "start": 154.611,
+   "end": 163.768
   },
   {
    "id": "seg-027",
    "hash": "3fa98b90caec",
-   "start": 105.089,
-   "end": 108.824
+   "start": 164.188,
+   "end": 167.831
   },
   {
    "id": "seg-028",
    "hash": "06c74aa7e156",
-   "start": 109.244,
-   "end": 111.089
+   "start": 168.251,
+   "end": 170.741
   },
   {
    "id": "seg-029",
    "hash": "f3860d782619",
-   "start": 111.509,
-   "end": 115.454
+   "start": 171.161,
+   "end": 177.855
   },
   {
    "id": "seg-030",
    "hash": "cbcbbd990b3f",
-   "start": 115.874,
-   "end": 118.316
+   "start": 178.275,
+   "end": 182.664
   },
   {
    "id": "seg-031",
    "hash": "df72ab63d510",
-   "start": 119.266,
-   "end": 121.62
+   "start": 183.614,
+   "end": 187.79
   },
   {
    "id": "seg-032",
    "hash": "883bfb918ccb",
-   "start": 122.04,
-   "end": 124.341
+   "start": 188.21,
+   "end": 192.055
   },
   {
    "id": "seg-033",
    "hash": "0e96b8e0a0ac",
-   "start": 126.141,
-   "end": 129.939
+   "start": 193.855,
+   "end": 199.93
   },
   {
    "id": "seg-034",
    "hash": "265ee58fea65",
-   "start": 130.359,
-   "end": 132.018
+   "start": 200.35,
+   "end": 203.363
   },
   {
    "id": "seg-035",
    "hash": "167d603f39ff",
-   "start": 132.968,
-   "end": 136.658
+   "start": 204.313,
+   "end": 209.972
   },
   {
    "id": "seg-036",
    "hash": "e841c2a3d43a",
-   "start": 137.608,
-   "end": 147.275
+   "start": 210.922,
+   "end": 226.223
   },
   {
    "id": "seg-037",
    "hash": "c44df9e5866a",
-   "start": 147.695,
-   "end": 151.015
+   "start": 226.643,
+   "end": 231.811
   },
   {
    "id": "seg-038",
    "hash": "127bdf30fa2a",
-   "start": 151.965,
-   "end": 154.121
+   "start": 232.761,
+   "end": 236.649
   },
   {
    "id": "seg-039",
    "hash": "6e0a0dedffc3",
-   "start": 154.541,
-   "end": 155.269
+   "start": 237.069,
+   "end": 237.917
   },
   {
    "id": "seg-040",
    "hash": "4f4461e690c1",
-   "start": 155.689,
-   "end": 159.298
+   "start": 238.337,
+   "end": 244.497
   },
   {
    "id": "seg-041",
    "hash": "39a9f7dd48f1",
-   "start": 159.718,
-   "end": 163.255
+   "start": 244.917,
+   "end": 250.864
   },
   {
    "id": "seg-042",
    "hash": "e2882e933144",
-   "start": 163.675,
-   "end": 168.602
+   "start": 251.284,
+   "end": 260.196
   },
   {
    "id": "seg-043",
    "hash": "24dbb8cbbc22",
-   "start": 169.552,
-   "end": 172.593
+   "start": 261.146,
+   "end": 266.186
   },
   {
    "id": "seg-044",
    "hash": "8dbf18cc6ce5",
-   "start": 173.013,
-   "end": 176.928
+   "start": 266.606,
+   "end": 273.705
   },
   {
    "id": "seg-045",
    "hash": "777b2b29cb56",
-   "start": 177.348,
-   "end": 179.606
+   "start": 274.125,
+   "end": 277.81
   },
   {
    "id": "seg-046",
    "hash": "9cac8e463c0a",
-   "start": 180.026,
-   "end": 183.054
+   "start": 278.23,
+   "end": 282.907
   },
   {
    "id": "seg-047",
    "hash": "3a6a0e86144f",
-   "start": 184.854,
-   "end": 189.819
+   "start": 284.707,
+   "end": 290.526
   },
   {
    "id": "seg-048",
    "hash": "c9c128bd4818",
-   "start": 190.239,
-   "end": 196.03
+   "start": 290.946,
+   "end": 299.815
   },
   {
    "id": "seg-049",
    "hash": "c786c93486c9",
-   "start": 196.45,
-   "end": 199.635
+   "start": 300.235,
+   "end": 305.115
   },
   {
    "id": "seg-050",
    "hash": "2fe6097e8b48",
-   "start": 200.585,
-   "end": 203.744
+   "start": 306.065,
+   "end": 311.479
   },
   {
    "id": "seg-051",
    "hash": "f624792d95b1",
-   "start": 204.694,
-   "end": 207.292
+   "start": 312.429,
+   "end": 316.893
   },
   {
    "id": "seg-052",
    "hash": "211cde9c6777",
-   "start": 207.712,
-   "end": 213.111
+   "start": 317.313,
+   "end": 323.505
   },
   {
    "id": "seg-053",
    "hash": "ad67297d1460",
-   "start": 213.531,
-   "end": 215.422
+   "start": 323.925,
+   "end": 327.119
   },
   {
    "id": "seg-054",
    "hash": "beeb58ebf9ae",
-   "start": 215.842,
-   "end": 221.252
+   "start": 327.539,
+   "end": 336.377
   },
   {
    "id": "seg-055",
    "hash": "32141fcceb7a",
-   "start": 222.202,
-   "end": 224.074
+   "start": 337.327,
+   "end": 340.564
   },
   {
    "id": "seg-056",
    "hash": "42346f98f777",
-   "start": 224.494,
-   "end": 227.918
+   "start": 340.984,
+   "end": 347.347
   },
   {
    "id": "seg-057",
    "hash": "d6b2d125a415",
-   "start": 228.338,
-   "end": 230.873
+   "start": 347.767,
+   "end": 352.028
   },
   {
    "id": "seg-058",
    "hash": "b60f53f1c8a7",
-   "start": 231.823,
-   "end": 232.624
+   "start": 352.978,
+   "end": 354.071
   },
   {
    "id": "seg-059",
    "hash": "4a4fff0010e8",
-   "start": 233.044,
-   "end": 238.559
+   "start": 354.491,
+   "end": 363.862
   },
   {
    "id": "seg-060",
    "hash": "5bd819fc63ff",
-   "start": 238.979,
-   "end": 243.688
+   "start": 364.282,
+   "end": 371.551
   },
   {
    "id": "seg-061",
    "hash": "b60a04e99681",
-   "start": 245.488,
-   "end": 248.41
+   "start": 373.351,
+   "end": 378.359
   },
   {
    "id": "seg-062",
    "hash": "bb16af281011",
-   "start": 249.36,
-   "end": 252.473
+   "start": 379.309,
+   "end": 381.384
   },
   {
    "id": "seg-063",
    "hash": "f85154080ffd",
-   "start": 252.893,
-   "end": 257.825
+   "start": 381.804,
+   "end": 388.284
   },
   {
    "id": "seg-064",
    "hash": "a8aee4d9e57f",
-   "start": 258.775,
-   "end": 263.382
+   "start": 389.234,
+   "end": 397.239
   },
   {
    "id": "seg-065",
    "hash": "d56b69eca3f9",
-   "start": 263.802,
-   "end": 271.435
+   "start": 397.659,
+   "end": 410.027
   },
   {
    "id": "seg-066",
    "hash": "8fe4a011ee44",
-   "start": 271.855,
-   "end": 274.06
+   "start": 410.447,
+   "end": 414.506
   },
   {
    "id": "seg-067",
    "hash": "62e5502e94be",
-   "start": 275.01,
-   "end": 278.695
+   "start": 415.456,
+   "end": 422.352
   },
   {
    "id": "seg-068",
    "hash": "b50afb42b2b7",
-   "start": 279.115,
-   "end": 281.67
+   "start": 422.772,
+   "end": 426.98
   }
  ]
 }

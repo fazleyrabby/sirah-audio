@@ -13,10 +13,13 @@ Usage: indicf5_narrate.py [--ref REF] [--ref-text-file TXT] [--steps 8] [--limit
 import argparse
 import hashlib
 import json
+import os
 import pathlib
 import re
 import subprocess
 import time
+
+os.environ["PATH"] = f"/opt/homebrew/bin:/usr/local/bin:{os.environ.get('PATH', '')}"
 
 import numpy as np
 import soundfile as sf
